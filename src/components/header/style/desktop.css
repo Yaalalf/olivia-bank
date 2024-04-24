@@ -1,0 +1,27 @@
+.HeaderSection {
+  inline-size: 100%;
+  block-size: 160px;
+
+  padding-inline: 40px;
+
+  display: flex;
+
+  position: fixed;
+  top: 0px;
+
+  align-items: center;
+
+  background-color: rgb(3, 11, 28);
+  background-color: transparent;
+
+  z-index: 1000;
+}
+
+.HeaderSection .Logo {
+  inline-size: 120px;
+  block-size: 120px;
+  background-image: url("/Logo_Olivia_Bank.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
