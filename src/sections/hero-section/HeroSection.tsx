@@ -1,4 +1,5 @@
 import "./style/desktop.css";
+import "./style/mobile.css";
 
 export default function HeroSection() {
   return (
