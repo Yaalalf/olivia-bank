@@ -60,6 +60,10 @@
   font-weight: 400;
 
   color: rgb(204 169 132);
+
+  animation: slideInSmall 400ms ease-in-out;
+  animation-delay: 200ms;
+  animation-fill-mode: both;
 }
 .HeroSection .HeroTitle h1 {
   inline-size: 400px;
@@ -69,6 +73,10 @@
   font-weight: 500;
 
   color: rgb(235, 232, 232);
+
+  animation: slideInSmall 600ms ease-in-out;
+  animation-delay: 225ms;
+  animation-fill-mode: both;
 }
 
 .HeroSection .HeroTitle .Button {
@@ -82,6 +90,10 @@
 
   border: 3px solid white;
   border-radius: 32px;
+
+  animation: slideInSmall 700ms ease-in-out;
+  animation-delay: 250ms;
+  animation-fill-mode: both;
 }
 
 .HeroSection .CalculatorContainer {
@@ -357,6 +369,17 @@
 @keyframes slideIn {
   from {
     transform: translateY(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInSmall {
+  from {
+    transform: translateY(100px);
     opacity: 0;
   }
   to {
