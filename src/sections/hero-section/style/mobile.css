@@ -1,7 +1,7 @@
 @media (360px <= width <= 1024px) {
   .HeroSection {
     inline-size: 100%;
-    block-size: 880px;
+    block-size: 1280px;
 
     padding-inline: 4px;
     padding-block-start: 180px;
@@ -19,7 +19,7 @@
   .HeroSection .HeroTitle {
     inline-size: 100%;
     text-align: center;
-
+    position: static;
     margin-block-end: 80px;
   }
 
@@ -72,14 +72,14 @@
 
   .HeroSection .CalculatorContainer .Calculator .PhoneDecoration {
     inline-size: 340px;
-    block-size: 500px;
+    block-size: 700px;
 
     position: absolute;
     top: -60px;
     left: -24px;
 
     background-image: url("/phone.png");
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center 0px;
 
@@ -88,7 +88,7 @@
 
   .HeroSection .CalculatorContainer .Calculator .PhoneDecoration.Blur {
     inline-size: 400px;
-    block-size: 620px;
+    block-size: 900px;
 
     top: -100px;
     left: -52px;
@@ -98,13 +98,12 @@
 
   .HeroSection .CalculatorContainer .Calculator .Card {
     inline-size: 290px;
-    block-size: 360px;
+    block-size: 640px;
 
     background-color: rgb(229, 234, 240);
     position: relative;
-    top: 0px;
+    top: 100px;
     left: 0px;
     z-index: 3;
-    border-radius: 12px;
   }
 }

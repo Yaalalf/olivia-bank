@@ -10,11 +10,14 @@
   top: 0px;
 
   align-items: center;
+  justify-content: center;
 
   background-color: rgb(3, 11, 28);
   background-color: transparent;
 
   z-index: 1000;
+
+  transition: all ease-in-out 200ms;
 }
 
 .HeaderSection .Logo {
@@ -24,4 +27,46 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  transition: scale ease-in-out 300ms;
+}
+
+/******************************Mini******************************/
+.HeaderSection.Mini {
+  inline-size: 100%;
+  block-size: 80px;
+
+  padding-inline: 40px;
+
+  display: flex;
+
+  position: fixed;
+  top: 0px;
+
+  align-items: center;
+
+  background-color: rgb(233, 233, 233);
+
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.292);
+
+  z-index: 1000;
+}
+
+.HeaderSection.Mini .Logo {
+  inline-size: 120px;
+  block-size: 120px;
+
+  background-color: rgb(3, 11, 28);
+
+  scale: 0.8;
+
+  background-image: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  mask-image: url("/Logo_Olivia_Bank.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
