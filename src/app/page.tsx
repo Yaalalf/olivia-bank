@@ -6,7 +6,7 @@ import { HeroSection, OnBoardingSection } from "@/sections";
 import { useState } from "react";
 
 export default function Home() {
-  const [miniState, setMiniState] = useState(false);
+  const [miniState, setMiniState] = useState(true);
 
   return (
     <>

@@ -42,8 +42,8 @@ export default function HeroSection({
 
       <header className="HeroTitle">
         <p>Servicio 100% garantizado</p>
-        <h1>Remesas a Cuba y el mundo</h1>
-        <button className="Button">Contactar</button>
+        <h1>Remesas a Cuba desde el mundo</h1>
+        <button className="Button">¡Envia dinero ahora!</button>
       </header>
 
       <div className="CalculatorContainer">
