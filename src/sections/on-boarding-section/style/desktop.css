@@ -2,9 +2,9 @@
   inline-size: 100%;
   block-size: 2000px;
 
-  padding-block-start: 120px;
+  padding-block-start: 40px;
 
-  background-color: rgb(234, 237, 239);
+  background-color: rgb(242, 242, 242);
 
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
 }
 
 .OnBoardingSection .SectionTitleContainer {
-  inline-size: 90%;
+  inline-size: 1100px;
 
   block-size: auto;
 
@@ -22,6 +22,10 @@
 
   row-gap: 12px;
   column-gap: 8px;
+
+  position: relative;
+
+  order: 1;
 }
 
 .OnBoardingSection .SectionTitle {
@@ -53,20 +57,20 @@
 }
 
 .OnBoardingSection .SectionTitle h2 {
-  font-size: 40px;
+  font-size: 32px;
   color: rgb(201, 168, 133);
   font-weight: 500;
-  line-height: 52px;
+  line-height: 48px;
 }
 
 .OnBoardingSection .SectionTitle p {
   margin-block-start: 20px;
-  font-size: 22px;
+  font-size: 18px;
 
   color: rgb(205, 212, 219);
 }
 
-.DecorationContainer {
+.OnBoardingSection .SectionTitle .DecorationContainer {
   inline-size: 400px;
   block-size: 400px;
 
@@ -307,3 +311,70 @@
 
   transform: rotateZ(90deg);
 } */
+
+.OnBoardingSection .OnBoardingTitleContainer {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-block-start: 20px;
+  margin-block-end: 12px;
+}
+
+.OnBoardingSection .OnBoardingTitleContainer .Content h2 {
+  inline-size: 480px;
+  padding: 8px;
+}
+
+.OnBoardingSection .OnBoardingTitleContainer .Content h2 {
+  inline-size: 100%;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #312e2c;
+  font-weight: 600;
+}
+
+.OnBoardingSection .OnBoardingTitleContainer .Content p {
+  inline-size: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #6b6663;
+  font-weight: 600;
+}
+
+.OnBoardingSection .OnBoardingTitleContainer .DecorationContainer {
+  margin-block-start: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OnBoardingSection .OnBoardingTitleContainer .DecorationContainer .Decoration {
+  inline-size: 160px;
+  block-size: 48px;
+
+  background-color: #626267;
+  mask-image: url("/decoration_band.png");
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.OnBoardingSection
+  .OnBoardingTitleContainer
+  .DecorationContainer
+  .Decoration:nth-of-type(1) {
+  transform: rotateZ(180deg) rotateX(180deg);
+}
+
+.OnBoardingSection .OnBoardingTitleContainer .DecorationContainer .Circle {
+  inline-size: 32px;
+  block-size: 32px;
+  border-radius: 100%;
+
+  background-color: #0f2027;
+}

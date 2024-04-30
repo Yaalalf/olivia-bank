@@ -37,8 +37,8 @@ export default function HeroSection({
   return (
     <section ref={heroSectionRef} className="HeroSection">
       <div className="Decorator"></div>
-      <div className="Decorator"></div>
-      <div className="Decorator"></div>
+      {/* <div className="Decorator"></div>
+      <div className="Decorator"></div> */}
 
       <header className="HeroTitle">
         <p>Servicio 100% garantizado</p>

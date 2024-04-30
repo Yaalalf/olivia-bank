@@ -1,0 +1,275 @@
+.Carrousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Carrousel .TabsContainer {
+  display: flex;
+  gap: 40px;
+}
+
+.Carrousel .TabsContainer .Tab {
+  inline-size: 80px;
+  block-size: 80px;
+
+  padding: 12px;
+
+  border-start-start-radius: 12px;
+  border-start-end-radius: 12px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.Carrousel .TabsContainer .Tab::after {
+  inline-size: 80px;
+  block-size: 80px;
+
+  display: block;
+  content: "";
+
+  background-color: #0f2027;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  transition: all ease-in-out 500ms;
+
+  transform-origin: bottom left;
+  border-start-start-radius: 100%;
+  border-start-end-radius: 100%;
+
+  scale: 0;
+}
+
+.Carrousel .TabsContainer .Tab.selected::after {
+  scale: 2;
+}
+
+.Carrousel .TabsContainer .Tab span {
+  inline-size: 100%;
+  block-size: 100%;
+
+  display: inline-block;
+
+  background-color: #283135;
+  mask-image: url("/icons/shield.svg");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  position: relative;
+
+  z-index: 10;
+
+  transition: all ease-in-out 1000ms;
+}
+
+.Carrousel .TabsContainer .Tab:nth-of-type(2) span {
+  mask-image: url("/icons/price.svg");
+}
+
+.Carrousel .TabsContainer .Tab:nth-of-type(3) span {
+  mask-image: url("/icons/soporte.svg");
+}
+
+.Carrousel .TabsContainer .Tab.selected span {
+  background-color: rgb(240, 240, 240);
+}
+
+.Carrousel .SliderContainer {
+  inline-size: 1100px;
+  block-size: 440px;
+
+  display: flex;
+
+  margin-block-start: 0px;
+  margin-block-end: 200px;
+
+  position: relative;
+  top: 0px;
+}
+
+.Carrousel .SliderContainer .Slider {
+  inline-size: 100%;
+  block-size: 100%;
+
+  padding: 40px;
+
+  display: flex;
+
+  position: relative;
+
+  align-items: start;
+  justify-content: center;
+  background-color: #0f2027;
+
+  border-radius: 40px;
+
+  overflow: hidden;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker {
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+
+  display: flex;
+
+  align-items: start;
+  justify-content: center;
+}
+
+.Carrousel .SliderContainer .Slider .Content {
+  margin-block-start: 80px;
+}
+
+.Carrousel .SliderContainer .Slider .Content h3 {
+  font-size: 40px;
+  color: #e9d19c;
+  font-weight: 500;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.entered .Content h3 {
+  animation: slideInSmall 1000ms ease-in-out;
+  animation-delay: 500ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.exited .Content h3 {
+  animation: slideOutSmall 1000ms ease-in-out;
+  animation-delay: 0ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .Slider .Content p {
+  inline-size: 300px;
+  font-size: 18px;
+  color: #d7d6d4;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.entered .Content p {
+  animation: slideInSmall 1000ms ease-in-out;
+  animation-delay: 600ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.exited .Content p {
+  animation: slideOutSmall 1000ms ease-in-out;
+  animation-delay: 100ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .Slider .ImageDecorator {
+  inline-size: 800px;
+  block-size: 400px;
+
+  background-size: 100%;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.entered .ImageDecorator {
+  animation: slideLeftInSmall 800ms ease-in-out;
+  animation-delay: 400ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.exited .ImageDecorator {
+  animation: slideLeftOutSmall 1000ms ease-in-out;
+  animation-delay: 100ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .Slider .ImageDecoratorTwo {
+  inline-size: 400px;
+  block-size: 400px;
+
+  background-size: 100%;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.Carrousel
+  .SliderContainer
+  .Slider
+  .TransitionMarker.entered
+  .ImageDecoratorTwo {
+  animation: slideRightInSmall 900ms ease-in-out;
+  animation-delay: 200ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel
+  .SliderContainer
+  .Slider
+  .TransitionMarker.exited
+  .ImageDecoratorTwo {
+  animation: slideRightOutSmall 1000ms ease-in-out;
+  animation-delay: 100ms;
+  animation-fill-mode: both;
+}
+
+.Carrousel .SliderContainer .TransitionMarker.Two .ImageDecorator {
+  inline-size: 600px;
+  block-size: 400px;
+
+  background-size: contain;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  left: -150px;
+  bottom: 100px;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.Two .ImageDecoratorTwo {
+  inline-size: 400px;
+  block-size: 400px;
+
+  background-size: 100%;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: -0px;
+  bottom: -100px;
+}
+
+.Carrousel .SliderContainer .TransitionMarker.Three .ImageDecorator {
+  inline-size: 500px;
+  block-size: 320px;
+
+  background-size: contain;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  left: -50px;
+  bottom: 0px;
+}
+
+.Carrousel .SliderContainer .Slider .TransitionMarker.Three .ImageDecoratorTwo {
+  inline-size: 500px;
+  block-size: 500px;
+
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: -0px;
+  bottom: -100px;
+}

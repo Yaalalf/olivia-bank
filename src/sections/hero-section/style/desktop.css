@@ -20,16 +20,23 @@
   block-size: 400px;
 
   position: absolute;
-  bottom: -140px;
+  bottom: 0px;
 
-  background-color: rgb(3, 11, 28);
+  background-image: url("/hero-background.png");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* background-color: rgb(3, 11, 28);
   background-image: linear-gradient(15deg, rgb(3, 11, 28) 0%, #80d0c7 100%);
   mask-image: url("/tribal.png");
   mask-position: -300px 0px;
   mask-size: 60%;
   mask-repeat: no-repeat;
+*/
+  filter: blur(0px) grayscale(40%) brightness(180%) contrast(100%);
 
-  filter: blur(200px);
+  mix-blend-mode: soft-light;
   z-index: 0;
 }
 
@@ -48,7 +55,7 @@
 
 .HeroSection .HeroTitle {
   position: relative;
-  top: -80px;
+  top: -120px;
   z-index: 1;
 }
 
@@ -66,9 +73,9 @@
   animation-fill-mode: both;
 }
 .HeroSection .HeroTitle h1 {
-  inline-size: 400px;
-  font-size: 72px;
-  line-height: 80px;
+  inline-size: 600px;
+  font-size: 60px;
+  line-height: 72px;
 
   font-weight: 500;
 
@@ -385,5 +392,115 @@
   to {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutSmall {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftIn {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftInSmall {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftOut {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftOutSmall {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRightIn {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightInSmall {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRightOutSmall {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100px);
+    opacity: 0;
   }
 }

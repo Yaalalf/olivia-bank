@@ -1,3 +1,4 @@
+import Carrousel from "@/components/carrousel";
 import "./style/desktop.css";
 
 export default function OnBoardingSection() {
@@ -52,6 +53,20 @@ export default function OnBoardingSection() {
           </div>
         </div>
       </div>
+
+      <div className="OnBoardingTitleContainer">
+        <div className="Content">
+          <h2> Un puente financiero </h2>
+          <p>Somos la conexión entre usted y su familia</p>
+        </div>
+        <div className="DecorationContainer">
+          <div className="Decoration"></div>
+          <div className="Circle"></div>
+          <div className="Decoration"></div>
+        </div>
+      </div>
+
+      <Carrousel />
     </section>
   );
 }
