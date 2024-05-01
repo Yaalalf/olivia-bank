@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
 }
+/****************************Tabs*************************************/
 
 .Carrousel .TabsContainer {
   display: flex;
@@ -80,7 +81,7 @@
 .Carrousel .TabsContainer .Tab.selected span {
   background-color: rgb(240, 240, 240);
 }
-
+/**********************************Slider***********************************/
 .Carrousel .SliderContainer {
   inline-size: 1100px;
   block-size: 440px;
@@ -173,7 +174,7 @@
   background-repeat: no-repeat;
 
   position: absolute;
-  left: 0px;
+  left: -100px;
   bottom: 0px;
 }
 
@@ -226,20 +227,20 @@
   inline-size: 600px;
   block-size: 400px;
 
-  background-size: contain;
+  background-size: 80%;
   background-position: 0px 0px;
   background-repeat: no-repeat;
 
   position: absolute;
   left: -150px;
-  bottom: 100px;
+  bottom: 80px;
 }
 
 .Carrousel .SliderContainer .Slider .TransitionMarker.Two .ImageDecoratorTwo {
   inline-size: 400px;
   block-size: 400px;
 
-  background-size: 100%;
+  background-size: 90%;
   background-position: 0px 0px;
   background-repeat: no-repeat;
 
@@ -257,7 +258,7 @@
   background-repeat: no-repeat;
 
   position: absolute;
-  left: -50px;
+  left: -40px;
   bottom: 0px;
 }
 
@@ -265,11 +266,13 @@
   inline-size: 500px;
   block-size: 500px;
 
-  background-size: 150%;
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 
   position: absolute;
-  right: -0px;
-  bottom: -100px;
+  right: -20px;
+  bottom: -40px;
+
+  filter: grayscale(40%);
 }

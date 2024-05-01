@@ -20,20 +20,13 @@
   block-size: 400px;
 
   position: absolute;
-  bottom: 0px;
+  bottom: -80px;
 
-  background-image: url("/hero-background.png");
+  background-image: url("/hero-background.webp");
   background-size: 120%;
   background-repeat: no-repeat;
   background-position: center;
 
-  /* background-color: rgb(3, 11, 28);
-  background-image: linear-gradient(15deg, rgb(3, 11, 28) 0%, #80d0c7 100%);
-  mask-image: url("/tribal.png");
-  mask-position: -300px 0px;
-  mask-size: 60%;
-  mask-repeat: no-repeat;
-*/
   filter: blur(0px) grayscale(40%) brightness(180%) contrast(100%);
 
   mix-blend-mode: soft-light;
@@ -127,8 +120,8 @@
   top: -6px;
   left: -18px;
 
-  background-image: url("/phone.png");
-  background-size: contain;
+  background-image: url("/phone.webp");
+  background-size: 101%;
   background-repeat: no-repeat;
   background-position: center;
 

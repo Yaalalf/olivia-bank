@@ -131,8 +131,8 @@ const data = [
     description:
       "Envía dinero en cuestión de minutos desde la comodidad de su hogar",
 
-    imgUrl: "/home-confort.png",
-    imgUrlTwo: "/home-confort-v2.png",
+    imgUrl: "/home-confort.webp",
+    imgUrlTwo: "/home-confort-v2.webp",
   },
   {
     className: "Two",
@@ -140,8 +140,8 @@ const data = [
     description:
       "Ofrecemos tarifas bajas y transparentes para que más dinero llegue a destino",
 
-    imgUrl: "/tasa-v2.png",
-    imgUrlTwo: "/tasa.png",
+    imgUrl: "/tasa-v2.webp",
+    imgUrlTwo: "/tasa.webp",
   },
   {
     className: "Three",
@@ -149,7 +149,7 @@ const data = [
     description:
       "Nuestro equipo está aquí para ayudarte en cada paso del proceso de envío de dinero.",
 
-    imgUrl: "/soporte.png",
-    imgUrlTwo: "/soporte-v2.png",
+    imgUrl: "/soporte.webp",
+    imgUrlTwo: "/soporte-v2.webp",
   },
 ];
