@@ -1,0 +1,52 @@
+.TitleContainer .Content h2 {
+  inline-size: 480px;
+  padding: 8px;
+}
+
+.TitleContainer .Content h2 {
+  inline-size: 100%;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #312e2c;
+  font-weight: 600;
+}
+
+.TitleContainer .Content p {
+  inline-size: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #6b6663;
+  font-weight: 600;
+}
+
+.TitleContainer .DecorationContainer {
+  margin-block-start: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TitleContainer .DecorationContainer .Decoration {
+  inline-size: 160px;
+  block-size: 48px;
+
+  background-color: #626267;
+  mask-image: url("/decoration_band.png");
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.TitleContainer .DecorationContainer .Decoration:nth-of-type(1) {
+  transform: rotateZ(180deg) rotateX(180deg);
+}
+
+.TitleContainer .DecorationContainer .Circle {
+  inline-size: 32px;
+  block-size: 32px;
+  border-radius: 100%;
+
+  background-color: #0f2027;
+}

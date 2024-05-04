@@ -1,0 +1,226 @@
+.PathSection {
+  block-size: auto;
+  padding-block-start: 620px;
+  padding-block-end: 120px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #0f2027;
+  overflow: hidden;
+}
+
+.PathSection .TitleContainer h2 {
+  color: #f2f2f2 !important;
+}
+
+.PathSection .TitleContainer p {
+  color: #909296 !important;
+}
+
+.PathSection .TitleContainer .Circle {
+  background-color: #f2f2f2 !important;
+}
+
+.PathSection .CardContainer {
+  inline-size: 100%;
+
+  margin-block-start: 220px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.PathSection .CardContainer .Content {
+  inline-size: 440px;
+
+  position: relative;
+  z-index: 10;
+}
+
+.PathSection .CardContainer:nth-of-type(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.PathSection .CardContainer h3 {
+  margin-block-start: 4px;
+
+  margin-block-end: 32px;
+  font-size: 40px;
+  line-height: 40px;
+  color: #dcbc9b;
+  font-weight: 500;
+}
+.PathSection .CardContainer p.SubTitle {
+  font-size: 14px;
+  color: rgb(194, 208, 217);
+
+  font-style: italic;
+}
+
+.PathSection .CardContainer p.Text {
+  font-size: 20px;
+
+  line-height: 42px;
+  color: rgb(229, 234, 238);
+
+  font-weight: 300;
+}
+
+.PathSection .CardContainer button {
+  inline-size: 200px;
+  block-size: 48px;
+
+  margin-block-start: 40px;
+
+  background-color: #385966;
+  color: rgb(231, 235, 241);
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+.PathSection .CardContainer .ImageContainer {
+  inline-size: 500px;
+  block-size: 360px;
+
+  position: relative;
+  flex-shrink: 0;
+
+  z-index: 10;
+}
+
+.PathSection .CardContainer:nth-of-type(2) .ImageContainer {
+  top: 40px;
+}
+
+.PathSection .CardContainer:nth-of-type(3) .ImageContainer {
+}
+
+.PathSection .CardContainer .Decorator {
+  inline-size: 300px;
+  block-size: 300px;
+
+  position: absolute;
+  right: 220px;
+  bottom: 0px;
+  mask-image: url("/sello.png");
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  background-color: #eff0f1;
+  z-index: 12;
+}
+
+.PathSection .CardContainer .DecoratorTwo {
+  inline-size: 300px;
+  block-size: 300px;
+
+  position: absolute;
+  right: -60px;
+  bottom: 0px;
+
+  border-radius: 12px;
+
+  background-image: url("/postal.jfif");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.PathSection .CardContainer .DecoratorThree {
+  inline-size: 260px;
+  block-size: 260px;
+
+  position: absolute;
+  right: 120px;
+  bottom: 200px;
+
+  border-radius: 12px;
+
+  background-image: url("/postal-v2.jfif");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.PathSection .CardContainer .DecoratorBottom {
+  inline-size: 1000px;
+  block-size: 500px;
+
+  position: absolute;
+  right: -120px;
+  bottom: -60px;
+
+  background-image: url("/Cuba.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: grayscale(100%) brightness(120%);
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  mix-blend-mode: overlay;
+}
+
+.PathSection .CardContainer:nth-of-type(3) .DecoratorBottom {
+  inline-size: 1000px;
+  block-size: 500px;
+
+  position: absolute;
+  right: auto;
+  left: -120px;
+  bottom: -60px;
+
+  background-image: url("/tasa-envio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: grayscale(100%) brightness(120%);
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  mix-blend-mode: overlay;
+}
+
+.PathSection .CardContainer .Icon {
+  inline-size: 400px;
+  block-size: 400px;
+
+  background-color: #1b2e36;
+
+  mask-image: url("/icons/send.svg");
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  position: absolute;
+
+  left: -20px;
+  top: -50px;
+}
+
+.PathSection .CardContainer:nth-of-type(3) .Icon {
+  mask-image: url("/icons/payments.svg");
+
+  left: auto;
+  right: -100px;
+  top: -20px;
+}
+
+.PathSection .CardContainer:nth-of-type(4) .Icon {
+  mask-image: url("/icons/process.svg");
+
+  left: -20px;
+  top: -50px;
+}

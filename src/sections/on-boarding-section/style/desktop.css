@@ -1,10 +1,12 @@
 .OnBoardingSection {
   inline-size: 100%;
-  block-size: 2000px;
 
   padding-block-start: 40px;
+  padding-block-end: 212px;
 
   background-color: rgb(242, 242, 242);
+
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -23,8 +25,8 @@
   row-gap: 12px;
   column-gap: 8px;
 
-  position: relative;
-
+  position: absolute;
+  bottom: -480px;
   order: 1;
 }
 
@@ -236,6 +238,8 @@
   background: -webkit-linear-gradient(to left, #29353b, #1b323a, #0f2027);
   background: linear-gradient(to left, #29353b, #1b323a, #0f2027);
 
+  background: #f1f2b5;
+  background: linear-gradient(to right, #929365, #135058);
   border-radius: 24px;
 
   text-align: start;
@@ -250,7 +254,7 @@
 
 .OnBoardingSection .SectionTransfer h2 {
   font-size: 24px;
-  color: #8492b1;
+  color: #262f41;
   font-weight: 500;
   line-height: 32px;
 }
@@ -259,7 +263,7 @@
   margin-block-start: 8px;
   font-size: 18px;
 
-  color: rgb(197, 205, 212);
+  color: rgb(54, 59, 62);
 }
 
 .OnBoardingSection .SectionTransfer .DecorationContainer {
@@ -321,60 +325,4 @@
 
   margin-block-start: 20px;
   margin-block-end: 12px;
-}
-
-.OnBoardingSection .OnBoardingTitleContainer .Content h2 {
-  inline-size: 480px;
-  padding: 8px;
-}
-
-.OnBoardingSection .OnBoardingTitleContainer .Content h2 {
-  inline-size: 100%;
-  font-size: 40px;
-  line-height: 48px;
-  text-align: center;
-  color: #312e2c;
-  font-weight: 600;
-}
-
-.OnBoardingSection .OnBoardingTitleContainer .Content p {
-  inline-size: 100%;
-  font-size: 20px;
-  text-align: center;
-  color: #6b6663;
-  font-weight: 600;
-}
-
-.OnBoardingSection .OnBoardingTitleContainer .DecorationContainer {
-  margin-block-start: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.OnBoardingSection .OnBoardingTitleContainer .DecorationContainer .Decoration {
-  inline-size: 160px;
-  block-size: 48px;
-
-  background-color: #626267;
-  mask-image: url("/decoration_band.png");
-  mask-size: 100%;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-
-.OnBoardingSection
-  .OnBoardingTitleContainer
-  .DecorationContainer
-  .Decoration:nth-of-type(1) {
-  transform: rotateZ(180deg) rotateX(180deg);
-}
-
-.OnBoardingSection .OnBoardingTitleContainer .DecorationContainer .Circle {
-  inline-size: 32px;
-  block-size: 32px;
-  border-radius: 100%;
-
-  background-color: #0f2027;
 }
