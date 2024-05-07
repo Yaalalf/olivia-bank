@@ -1,7 +1,7 @@
 .PathSection {
   block-size: auto;
-  padding-block-start: 620px;
-  padding-block-end: 120px;
+  padding-block-start: 520px;
+  padding-block-end: 0px;
 
   display: flex;
   align-items: center;
@@ -11,42 +11,42 @@
   overflow: hidden;
 }
 
-.PathSection .TitleContainer h2 {
-  color: #f2f2f2 !important;
-}
-
-.PathSection .TitleContainer p {
-  color: #909296 !important;
-}
-
-.PathSection .TitleContainer .Circle {
-  background-color: #f2f2f2 !important;
-}
-
-.PathSection .CardContainer {
+.PathSection .Cards {
   inline-size: 100%;
 
-  margin-block-start: 220px;
+  padding-block-start: 0px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.PathSection .Cards .CardContainer {
+  inline-size: 100%;
+
+  padding-block: 110px;
 
   position: relative;
 
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 0px;
+
+  flex-direction: row-reverse;
 }
 
-.PathSection .CardContainer .Content {
+.PathSection .Cards .CardContainer .Content {
   inline-size: 440px;
 
   position: relative;
   z-index: 10;
 }
 
-.PathSection .CardContainer:nth-of-type(2n + 1) {
-  flex-direction: row-reverse;
+.PathSection .Cards .CardContainer:nth-of-type(2n + 1) {
+  background-color: #d5d5d5;
+  flex-direction: row;
 }
 
-.PathSection .CardContainer h3 {
+.PathSection .Cards .CardContainer h3 {
   margin-block-start: 4px;
 
   margin-block-end: 32px;
@@ -55,14 +55,22 @@
   color: #dcbc9b;
   font-weight: 500;
 }
-.PathSection .CardContainer p.SubTitle {
+
+.PathSection .Cards .CardContainer:nth-of-type(2n + 1) h3 {
+  color: #385966;
+}
+
+.PathSection .Cards .CardContainer p.SubTitle {
   font-size: 14px;
   color: rgb(194, 208, 217);
 
   font-style: italic;
 }
+.PathSection .Cards .CardContainer:nth-of-type(2n + 1) p.SubTitle {
+  color: #46494e;
+}
 
-.PathSection .CardContainer p.Text {
+.PathSection .Cards .CardContainer p.Text {
   font-size: 20px;
 
   line-height: 42px;
@@ -71,7 +79,11 @@
   font-weight: 300;
 }
 
-.PathSection .CardContainer button {
+.PathSection .Cards .CardContainer:nth-of-type(2n + 1) p.Text {
+  color: #696d73;
+}
+
+.PathSection .Cards .CardContainer button {
   inline-size: 200px;
   block-size: 48px;
 
@@ -83,7 +95,7 @@
   border-radius: 40px;
 }
 
-.PathSection .CardContainer .ImageContainer {
+.PathSection .Cards .CardContainer .ImageContainer {
   inline-size: 500px;
   block-size: 360px;
 
@@ -93,11 +105,11 @@
   z-index: 10;
 }
 
-.PathSection .CardContainer:nth-of-type(2) .ImageContainer {
+.PathSection .Cards .CardContainer:nth-of-type(1) .ImageContainer {
   top: 40px;
 }
 
-.PathSection .CardContainer:nth-of-type(3) .ImageContainer {
+.PathSection .CardContainer:nth-of-type(2) .ImageContainer {
 }
 
 .PathSection .CardContainer .Decorator {
@@ -132,6 +144,51 @@
   background-repeat: no-repeat;
 }
 
+.PathSection .CardContainer:nth-of-type(1) .DecoratorTwo {
+  inline-size: 500px;
+  block-size: 500px;
+
+  position: absolute;
+  right: 50px;
+  bottom: 60px;
+
+  background-image: url("/habana.png");
+
+  z-index: 20;
+}
+
+.PathSection .CardContainer:nth-of-type(2) .DecoratorTwo {
+  inline-size: 400px;
+  block-size: 400px;
+
+  position: absolute;
+  left: 60px;
+  right: auto;
+  bottom: 0px;
+
+  border-radius: 0px;
+
+  background-image: url("/tasa-tablas-v2.png");
+
+  z-index: 15;
+}
+
+.PathSection .CardContainer:nth-of-type(3) .DecoratorTwo {
+  inline-size: 500px;
+  block-size: 500px;
+
+  position: absolute;
+  left: 60px;
+  right: auto;
+  bottom: -120px;
+
+  border-radius: 0px;
+
+  background-image: url("/proceso.png");
+
+  z-index: 15;
+}
+
 .PathSection .CardContainer .DecoratorThree {
   inline-size: 260px;
   block-size: 260px;
@@ -148,20 +205,43 @@
   background-repeat: no-repeat;
 }
 
+.PathSection .CardContainer:nth-of-type(1) .DecoratorThree {
+  inline-size: 700px;
+  block-size: 700px;
+  position: absolute;
+  right: -160px;
+  bottom: -120px;
+  background-image: url("/habana-v2.png");
+}
+
+.PathSection .CardContainer:nth-of-type(2) .DecoratorThree {
+  inline-size: 260px;
+  block-size: 260px;
+
+  position: absolute;
+  right: 360px;
+
+  bottom: 140px;
+
+  border-radius: 0px;
+
+  background-image: url("/tasa-tablas.png");
+}
+
 .PathSection .CardContainer .DecoratorBottom {
   inline-size: 1000px;
-  block-size: 500px;
+  block-size: 100%;
 
   position: absolute;
   right: -120px;
-  bottom: -60px;
+  bottom: 0px;
 
   background-image: url("/Cuba.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  filter: grayscale(100%) brightness(120%);
+  filter: grayscale(100%) brightness(120%) blur(5px);
 
   border-radius: 40px;
 
@@ -170,34 +250,27 @@
   mix-blend-mode: overlay;
 }
 
-.PathSection .CardContainer:nth-of-type(3) .DecoratorBottom {
-  inline-size: 1000px;
-  block-size: 500px;
-
-  position: absolute;
+.PathSection .CardContainer:nth-of-type(2) .DecoratorBottom {
   right: auto;
   left: -120px;
-  bottom: -60px;
+  bottom: 0px;
 
   background-image: url("/tasa-envio.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
 
-  filter: grayscale(100%) brightness(120%);
+.PathSection .CardContainer:nth-of-type(3) .DecoratorBottom {
+  position: absolute;
+  right: -120px;
+  bottom: 0px;
 
-  border-radius: 40px;
-
-  overflow: hidden;
-
-  mix-blend-mode: overlay;
+  background-image: url("/transparente.jpg");
 }
 
 .PathSection .CardContainer .Icon {
   inline-size: 400px;
   block-size: 400px;
 
-  background-color: #1b2e36;
+  background-color: #b2b5b7;
 
   mask-image: url("/icons/send.svg");
   mask-size: cover;
@@ -207,20 +280,20 @@
   position: absolute;
 
   left: -20px;
-  top: -50px;
+  top: 80px;
 }
 
-.PathSection .CardContainer:nth-of-type(3) .Icon {
+.PathSection .CardContainer:nth-of-type(2) .Icon {
   mask-image: url("/icons/payments.svg");
 
   left: auto;
   right: -100px;
-  top: -20px;
+  top: 100px;
 }
 
-.PathSection .CardContainer:nth-of-type(4) .Icon {
+.PathSection .CardContainer:nth-of-type(3) .Icon {
   mask-image: url("/icons/process.svg");
 
-  left: -20px;
-  top: -50px;
+  left: -80px;
+  top: 100px;
 }
