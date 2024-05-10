@@ -1,10 +1,13 @@
 import Carrousel from "@/components/carrousel";
 import "./style/desktop.css";
 import Title from "@/components/title/Title";
+import Map from "@/components/map";
 
 export default function OnBoardingSection() {
   return (
     <section className="OnBoardingSection">
+      <Map />
+
       <div className="OnBoardingTitleContainer">
         <Title
           title="Un puente financiero"
