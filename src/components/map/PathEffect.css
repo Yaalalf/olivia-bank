@@ -1,0 +1,96 @@
+.PathEffectContainer .Target {
+  stroke: #525060;
+
+  animation: pulse 1000ms ease-in-out infinite;
+  transform-origin: center;
+  animation-fill-mode: forwards;
+}
+
+.PathEffectContainer .Target.pulse-20 {
+  animation-name: pulse-20;
+}
+.PathEffectContainer .Target.pulse-40 {
+  animation-name: pulse-40;
+}
+
+.PositionMarker {
+  fill: #323930;
+
+  animation: opacity 1000ms ease-in-out infinite;
+  transform-origin: center;
+  animation-fill-mode: forwards;
+}
+
+.PathEffectContainer .Path {
+  --delay: 0s;
+  --stroke-max-length: 0;
+  stroke: transparent;
+  stroke-dasharray: var(--stroke-max-length) var(--stroke-max-length);
+  stroke-dashoffset: var(--stroke-max-length);
+}
+.PathEffectContainer .Path.animated {
+  stroke: #313039d6;
+
+  animation: dash 2s ease-in-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes dashExit {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: var(--stroke-max-length);
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: var(--stroke-max-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes pulse-20 {
+  0% {
+    opacity: 0;
+    r: 10;
+  }
+  50% {
+    opacity: 1;
+    r: 20;
+  }
+  100% {
+    opacity: 0;
+    r: 10;
+  }
+}
+
+@keyframes pulse-40 {
+  0% {
+    opacity: 0;
+    r: 30;
+  }
+  50% {
+    opacity: 1;
+    r: 25;
+  }
+  100% {
+    opacity: 0;
+    r: 30;
+  }
+}

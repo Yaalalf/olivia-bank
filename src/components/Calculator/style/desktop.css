@@ -1,0 +1,305 @@
+.CalculatorContainer {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.CalculatorContainer .Calculator {
+  block-size: 600px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  top: 60px;
+}
+
+.CalculatorContainer .Calculator .PhoneDecoration {
+  inline-size: 400px;
+  block-size: 800px;
+
+  position: absolute;
+  top: -6px;
+  left: -18px;
+
+  background-image: url("/phone.webp");
+  background-size: 101%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  overflow: hidden;
+
+  animation: slideIn 700ms ease-out;
+}
+
+.CalculatorContainer .Calculator .PhoneDecoration.Blur {
+  inline-size: 500px;
+  block-size: 1000px;
+
+  top: -120px;
+  left: -68px;
+
+  filter: blur(60px);
+
+  animation-name: none;
+}
+/*****************************Card*****************************/
+.CalculatorContainer .Calculator .Card {
+  inline-size: 332px;
+  block-size: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 8px;
+
+  position: relative;
+  top: 120px;
+  left: 12px;
+
+  background-color: #edeff3e5;
+  border-radius: 40px;
+
+  z-index: 3;
+
+  animation: slideIn 1000ms ease-in-out;
+  animation-delay: 800ms;
+  animation-fill-mode: both;
+
+  overflow: hidden;
+}
+/********************CardTitle*************************/
+.CalculatorContainer .Calculator .Card .CardTitle {
+  margin-block-start: 20px;
+}
+
+.CalculatorContainer .Calculator .Card .CardTitle .UpdateTime {
+  inline-size: 100%;
+
+  padding-inline: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CalculatorContainer .Calculator .Card .CardTitle .UpdateTime hr {
+  inline-size: 40px;
+
+  flex-grow: 1;
+
+  border-top-width: 2px;
+  border-top-color: rgb(99, 100, 108);
+}
+
+.CalculatorContainer .Calculator .Card .CardTitle .UpdateTime span {
+  font-size: 12px;
+  line-height: 22px;
+  padding-block: 4px;
+  padding-inline-end: 8px;
+  font-weight: 800;
+  color: rgb(63, 65, 70);
+}
+
+.CalculatorContainer
+  .Calculator
+  .Card
+  .CardTitle
+  .UpdateTime
+  span:nth-of-type(2) {
+  padding-block: 4px;
+  padding-inline: 8px;
+  background-color: rgb(71, 72, 77);
+  border-radius: 12px;
+
+  line-height: 12px;
+  font-weight: 500;
+
+  color: white;
+}
+
+.CalculatorContainer .Calculator .Card .Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-block-start: 20px;
+}
+
+.CalculatorContainer .Calculator .Card .CardTitle p {
+  margin-block: 12px;
+  margin-inline: 8px;
+  padding-inline: 12px;
+  padding-block: 12px;
+
+  background-color: #293433e5;
+  border-radius: 4px;
+
+  font-size: 14px;
+  text-align: center;
+  color: #e3e4ec;
+}
+
+.CalculatorContainer .Calculator .Card .Decoration {
+  inline-size: 80px;
+  block-size: 40px;
+
+  background-color: rgb(71, 72, 77);
+  mask-image: url("/decoration_band.png");
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.CalculatorContainer .Calculator .Card .Decoration:nth-of-type(1) {
+  transform: rotateY(180deg);
+}
+
+.CalculatorContainer .Calculator .Card h3 {
+  inline-size: 40%;
+
+  color: rgb(33, 50, 83);
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/*************************Inputs*************************/
+
+.CalculatorContainer .Calculator .Card .Inputs {
+  margin-block-start: 40px;
+}
+
+.CalculatorContainer .Calculator .Card .InputContainer {
+  inline-size: 260px;
+  margin-block-end: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.CalculatorContainer .Calculator .Card .InputContainer .Decoration {
+  inline-size: 80px;
+  block-size: 40px;
+
+  background-color: #787640;
+  mask-image: url("/decoration_leaf.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  /* mask: none; */
+
+  position: absolute;
+  left: -58px;
+  top: 0px;
+
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.231));
+  transform: rotateZ(-94deg);
+
+  z-index: -1;
+}
+
+.CalculatorContainer
+  .Calculator
+  .Card
+  .InputContainer:nth-of-type(2)
+  .Decoration {
+  position: absolute;
+  left: auto;
+
+  right: -58px;
+  top: 0px;
+
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.231));
+  transform: rotateZ(-94deg) rotateX(180deg);
+
+  z-index: -1;
+}
+
+.CalculatorContainer .Calculator .Card .InputContainer .Input {
+  block-size: 52px;
+}
+
+.CalculatorContainer .Calculator .Card .prefix_icon {
+  inline-size: 20px;
+  block-size: 20px;
+
+  margin-inline: 8px;
+
+  background-color: currentColor;
+
+  mask-image: none;
+  mask-size: 120%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.CalculatorContainer .Calculator .Card .input_standard_posfix {
+  inline-size: 80px;
+}
+.CalculatorContainer .Calculator .Card .input_standard_posfix .Select {
+  padding-inline: 8px;
+}
+
+.CalculatorContainer .Calculator .Card .Result {
+  inline-size: 95%;
+  position: relative;
+  margin-block-start: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CalculatorContainer .Calculator .Card .Result .Decoration {
+  inline-size: 100%;
+  block-size: 40px;
+
+  background-color: #787640;
+  mask-image: url("/decorator_top_logo.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  /* mask: none; */
+
+  position: absolute;
+  left: 0%;
+  top: -39px;
+
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.231));
+
+  z-index: 1;
+}
+
+.CalculatorContainer .Calculator .Card .Result p {
+  padding: 12px;
+
+  background-color: #c7c7d6;
+
+  border: 2px solid rgb(87, 68, 27);
+  color: rgb(50, 51, 53);
+  text-align: center;
+
+  border-radius: 4px;
+}
+
+.CalculatorContainer .Calculator .Card .Result button {
+  inline-size: 220px;
+  block-size: auto;
+
+  padding: 12px;
+
+  margin-block-start: 8px;
+
+  background-color: #787640;
+  color: white;
+
+  border-radius: 30px;
+}

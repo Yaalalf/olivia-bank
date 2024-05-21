@@ -1,0 +1,144 @@
+.select {
+  inline-size: 100%;
+  block-size: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.select .select_input {
+  inline-size: 100%;
+  block-size: 100%;
+  padding-inline: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select .select_input .select_input_value {
+  font-size: 14px;
+}
+
+.select .select_input .select_drop_menu_icon {
+  inline-size: 20px;
+  block-size: 20px;
+
+  margin-inline-start: 2px;
+
+  background-color: currentColor;
+
+  mask-image: url("/icons/select_drop_menu.svg");
+  mask-size: 120%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  transform: rotateX(0deg);
+  transition: all ease-in-out 150ms;
+}
+
+.select .select_input .select_drop_menu_icon.clicked-state {
+  transform: rotateX(180deg);
+  transition: all ease-in-out 300ms;
+}
+
+.menu_select_container .menu_select_close_area {
+  inline-size: 100vw;
+  block-size: 100vh;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  background-color: transparent;
+
+  z-index: 9999;
+}
+
+.menu_select_container .menu_select {
+  inline-size: auto;
+  block-size: auto;
+
+  position: absolute;
+
+  z-index: 10000;
+
+  background-color: rgb(238, 236, 242);
+  border-radius: 4px;
+
+  animation: scaleIn ease-in-out 100ms backwards;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.251);
+}
+
+.menu_select_container .menu_select ul {
+  inline-size: 100%;
+}
+
+.menu_select_container .menu_select ul .select_menu_item {
+  inline-size: 100%;
+  block-size: auto;
+
+  padding: 12px;
+  padding-block: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+
+  text-align: center;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu_select_container
+  .menu_select
+  ul
+  .select_menu_item
+  .select_menu_item_icon {
+  inline-size: 20px;
+  block-size: 20px;
+
+  margin-inline-start: 2px;
+
+  background-color: currentColor;
+
+  mask-image: none;
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  flex-shrink: 0;
+}
+
+.menu_select_container .menu_select .selected_menu_item {
+  color: white;
+  background-color: #787640;
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes scaleOut {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}

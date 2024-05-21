@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import "./style/desktop.css";
 import "./style/mobile.css";
+import Calculator from "@/components/Calculator";
 
 export default function HeroSection({
   setMiniState,
@@ -42,53 +43,13 @@ export default function HeroSection({
 
       <header className="HeroTitle">
         <p>Servicio 100% garantizado</p>
-        <h1>Remesas a Cuba desde el mundo</h1>
+        <h1>
+          Remesas a <span>Cuba</span> sin <span>Restricciones</span>.
+        </h1>
         <button className="Button">¡Envia dinero ahora!</button>
       </header>
 
-      <div className="CalculatorContainer">
-        <div className="Calculator">
-          <div className="PhoneDecoration Blur"></div>
-          <div className="PhoneDecoration"></div>
-
-          <div className="Card">
-            <div className="CardTitle">
-              <div className="UpdateTime">
-                <span>Tasa actualizada</span> <hr /> <span>24/4/2024</span>
-              </div>
-              <div className="Header">
-                <div className="Decoration"></div>
-                <h3> Calculadora de Tarifas</h3>
-                <div className="Decoration"></div>
-              </div>
-              <p>
-                calcule el precio de su envio en base a nuestra tasa de cambio.
-              </p>
-            </div>
-
-            <div className="CurrentValue">
-              <p>1 USD = 340 CUP</p>
-              <p>1 USD = 0.8 MLC</p>
-              <p>1 USD = 0.9 EUR</p>
-            </div>
-
-            <div className="Inputs">
-              <div className="Container">
-                <p>Cantidad a Enviar</p>
-                <label className="InputContainer">
-                  <input className="Input" type="number" />
-                </label>
-              </div>
-              <div className="Container">
-                <p>Cantidad a Recibir</p>
-                <label className="InputContainer">
-                  <input className="Input" type="number" />
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Calculator />
     </section>
   );
 }

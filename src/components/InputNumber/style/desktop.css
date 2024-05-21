@@ -1,0 +1,94 @@
+.input_standard {
+  inline-size: auto;
+  block-size: auto;
+}
+
+.input_standard .input_standard_container {
+  inline-size: 100%;
+  block-size: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(120, 118, 64);
+  border-radius: 4px;
+
+  cursor: text;
+
+  transition: all ease 100ms;
+
+  overflow: hidden;
+}
+
+.input_standard .input_standard_container .input_standard_prefix {
+  inline-size: auto;
+  block-size: 100%;
+  background-color: rgb(173, 172, 118);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(62, 62, 65);
+}
+
+.input_standard .input_standard_container .input_standard_posfix {
+  inline-size: auto;
+  block-size: 100%;
+  background-color: rgb(173, 172, 118);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-weight: 600;
+  color: rgb(62, 62, 65);
+}
+
+.input_standard .input_standard_container_body {
+}
+
+.input_standard .input_standard_label {
+  margin-block-end: 0px;
+  padding-inline-start: 4px;
+  font-size: 12px;
+
+  font-weight: normal;
+
+  color: #ded295;
+}
+
+.input_standard .input_standard_container .input {
+  inline-size: 100%;
+  block-size: auto;
+
+  padding-inline: 8px;
+
+  background-color: transparent;
+  outline: none;
+
+  color: #e9e0b4;
+
+  font-size: 16px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+.input_standard .input_standard_container .input::-webkit-outer-spin-button,
+.input_standard .input_standard_container .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+.input_standard .input_standard_container input[type="number"].input {
+  -moz-appearance: textfield;
+}

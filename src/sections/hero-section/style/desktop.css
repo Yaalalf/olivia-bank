@@ -66,7 +66,7 @@
   animation-fill-mode: both;
 }
 .HeroSection .HeroTitle h1 {
-  inline-size: 600px;
+  inline-size: 580px;
   font-size: 60px;
   line-height: 72px;
 
@@ -77,6 +77,31 @@
   animation: slideInSmall 600ms ease-in-out;
   animation-delay: 225ms;
   animation-fill-mode: both;
+}
+
+.HeroSection .HeroTitle h1 > span:nth-of-type(1) {
+  background-image: linear-gradient(
+    45deg,
+    #b11010 33%,
+    #fbfbfb 33%,
+    #fbfbfb 66%,
+    #1e4393 67%,
+    #1e4393
+  );
+
+  font-weight: 600;
+
+  background-clip: text;
+  text-fill-color: transparent;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.HeroSection .HeroTitle h1 > span:nth-of-type(2) {
+  color: rgb(234, 203, 170);
 }
 
 .HeroSection .HeroTitle .Button {
@@ -94,276 +119,6 @@
   animation: slideInSmall 700ms ease-in-out;
   animation-delay: 250ms;
   animation-fill-mode: both;
-}
-
-.HeroSection .CalculatorContainer {
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-
-.HeroSection .CalculatorContainer .Calculator {
-  block-size: 600px;
-
-  display: flex;
-  align-items: center;
-
-  position: relative;
-  top: 60px;
-}
-
-.HeroSection .CalculatorContainer .Calculator .PhoneDecoration {
-  inline-size: 400px;
-  block-size: 800px;
-
-  position: absolute;
-  top: -6px;
-  left: -18px;
-
-  background-image: url("/phone.webp");
-  background-size: 101%;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  overflow: hidden;
-
-  animation: slideIn 700ms ease-out;
-}
-
-.HeroSection .CalculatorContainer .Calculator .PhoneDecoration.Blur {
-  inline-size: 500px;
-  block-size: 1000px;
-
-  top: -120px;
-  left: -68px;
-
-  filter: blur(60px);
-
-  animation-name: none;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card {
-  inline-size: 332px;
-  block-size: 800px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 8px;
-
-  position: relative;
-  top: 120px;
-  left: 12px;
-
-  background-color: rgb(229, 234, 240);
-  border-radius: 40px;
-
-  z-index: 3;
-
-  animation: slideIn 1000ms ease-in-out;
-  animation-delay: 800ms;
-  animation-fill-mode: both;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .CardTitle {
-  margin-block-start: 20px;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .CardTitle .UpdateTime {
-  inline-size: 100%;
-
-  padding-inline: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .CardTitle .UpdateTime hr {
-  inline-size: 40px;
-
-  flex-grow: 1;
-
-  border-top-width: 2px;
-  border-top-color: rgb(99, 100, 108);
-}
-
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .CardTitle
-  .UpdateTime
-  span {
-  font-size: 12px;
-  line-height: 22px;
-  padding-block: 4px;
-  padding-inline-end: 8px;
-  font-weight: 800;
-  color: rgb(63, 65, 70);
-}
-
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .CardTitle
-  .UpdateTime
-  span:nth-of-type(2) {
-  padding-block: 4px;
-  padding-inline: 8px;
-  background-color: rgb(71, 72, 77);
-  border-radius: 12px;
-
-  line-height: 12px;
-  font-weight: 500;
-
-  color: white;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-block-start: 20px;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .CardTitle p {
-  margin-block: 4px;
-  padding-inline: 12px;
-  font-size: 14px;
-
-  text-align: center;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Decoration {
-  inline-size: 80px;
-  block-size: 40px;
-
-  background-color: rgb(71, 72, 77);
-  mask-image: url("/decoration_band.png");
-  mask-size: 100%;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Decoration:nth-of-type(1) {
-  transform: rotateY(180deg);
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card h3 {
-  inline-size: 40%;
-
-  color: rgb(64, 83, 122);
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 800;
-  text-align: center;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .CurrentValue {
-  inline-size: 100%;
-  block-size: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 8px;
-  margin-block-start: 24px;
-
-  background-color: #80d0c7;
-
-  border-radius: 8px;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Inputs {
-  inline-size: 90%;
-  margin-block-start: 60px;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Inputs .Container {
-  margin-block-end: 24px;
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Inputs p {
-  margin-block-end: 4px;
-  padding-inline-start: 16px;
-  font-size: 16px;
-  color: rgb(71, 71, 77);
-}
-
-.HeroSection .CalculatorContainer .Calculator .Card .Inputs .InputContainer {
-  inline-size: 100%;
-  block-size: 40px;
-
-  padding-inline: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid rgb(120, 118, 64);
-  border-radius: 1000px;
-
-  cursor: text;
-
-  transition: all ease 100ms;
-}
-
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .Inputs
-  .InputContainer:has(.Input:focus) {
-  border-width: 3px;
-}
-
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .Inputs
-  .InputContainer
-  .Input {
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: transparent;
-  outline: none;
-}
-
-/* Chrome, Safari, Edge, Opera */
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .Inputs
-  .InputContainer
-  .Input::-webkit-outer-spin-button,
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .Inputs
-  .InputContainer
-  .Input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-.HeroSection
-  .CalculatorContainer
-  .Calculator
-  .Card
-  .Inputs
-  .InputContainer
-  input[type="number"].Input {
-  -moz-appearance: textfield;
 }
 
 @keyframes slideIn {

@@ -1,0 +1,109 @@
+@media (360px <= width <= 1024px) {
+  .HeroSection {
+    inline-size: 100%;
+    block-size: 1280px;
+
+    padding-inline: 4px;
+    padding-block-start: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .HeroSection .HeroTitle {
+    inline-size: 100%;
+    text-align: center;
+    position: static;
+    margin-block-end: 80px;
+  }
+
+  .HeroSection .HeroTitle p {
+    inline-size: 100%;
+    font-size: 18px;
+    line-height: 30px;
+
+    font-weight: 400;
+
+    color: rgb(204 169 132);
+  }
+  .HeroSection .HeroTitle h1 {
+    inline-size: 100%;
+    font-size: 50px;
+    line-height: 62px;
+
+    font-weight: 500;
+
+    color: rgb(235, 232, 232);
+  }
+
+  .HeroSection .HeroTitle .Button {
+    inline-size: 180px;
+    block-size: 48px;
+
+    margin-block-start: 12px;
+
+    font: 20px;
+    color: white;
+
+    border: 3px solid white;
+    border-radius: 32px;
+  }
+
+  .HeroSection .CalculatorContainer {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  .HeroSection .CalculatorContainer .Calculator {
+    block-size: 360px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+
+  .HeroSection .CalculatorContainer .Calculator .PhoneDecoration {
+    inline-size: 340px;
+    block-size: 700px;
+
+    position: absolute;
+    top: -60px;
+    left: -24px;
+
+    background-image: url("/phone.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+
+    overflow: hidden;
+  }
+
+  .HeroSection .CalculatorContainer .Calculator .PhoneDecoration.Blur {
+    inline-size: 400px;
+    block-size: 900px;
+
+    top: -100px;
+    left: -52px;
+
+    filter: blur(60px);
+  }
+
+  .HeroSection .CalculatorContainer .Calculator .Card {
+    inline-size: 290px;
+    block-size: 640px;
+
+    background-color: rgb(229, 234, 240);
+    position: relative;
+    top: 100px;
+    left: 0px;
+    z-index: 3;
+  }
+}
