@@ -1,5 +1,5 @@
 .PathEffectContainer .Target {
-  stroke: #525060;
+  stroke: #7c7a8e;
 
   animation: pulse 1000ms ease-in-out infinite;
   transform-origin: center;
@@ -14,7 +14,7 @@
 }
 
 .PositionMarker {
-  fill: #323930;
+  fill: #767d85;
 
   animation: opacity 1000ms ease-in-out infinite;
   transform-origin: center;
@@ -29,7 +29,7 @@
   stroke-dashoffset: var(--stroke-max-length);
 }
 .PathEffectContainer .Path.animated {
-  stroke: #313039d6;
+  stroke: #b8b6c9d6;
 
   animation: dash 2s ease-in-out forwards;
   animation-delay: var(--delay);

@@ -1,0 +1,327 @@
+.ItemsPage {
+  inline-size: 100vw;
+  block-size: 100vh;
+
+  padding-block-start: 0px;
+
+  background-color: rgb(227, 227, 227);
+  overflow: auto;
+}
+
+.ItemsPage .TitleContainer {
+  inline-size: 100%;
+
+  margin: 0 auto;
+  padding-block: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background-image: linear-gradient(
+    to top,
+    rgb(6, 17, 40) 0%,
+    rgb(32, 32, 36) 100%
+  );
+
+  /* border-end-start-radius: 12px;
+  border-end-end-radius: 12px; */
+
+  /* border-radius: 12px; */
+  overflow: hidden;
+}
+.ItemsPage .TitleContainer .Background {
+  inline-size: 100%;
+  block-size: 400px;
+
+  position: absolute;
+  bottom: -180px;
+  background-image: url("/hero-background.webp");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: blur(0px) grayscale(100%) brightness(180%) contrast(100%);
+
+  mix-blend-mode: soft-light;
+  z-index: 0;
+}
+
+.ItemsPage .TitleContainer .DecoratorBackground:nth-of-type(2) {
+  inline-size: 420px;
+  block-size: 420px;
+
+  background-image: url("/transferencia.webp");
+
+  right: auto;
+  left: -120px;
+
+  filter: grayscale(100%) hue-rotate(220deg);
+  transform: rotateZ(90deg);
+}
+
+.ItemsPage .TitleContainer .DecoratorBackground {
+  inline-size: 320px;
+  block-size: 320px;
+
+  position: absolute;
+
+  right: -60px;
+
+  background-image: url("/credit_card_trasnfer.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: grayscale(100%) hue-rotate(220deg);
+
+  transform: rotateZ(-90deg);
+}
+.ItemsPage .TitleContainer .title_container {
+  z-index: 5;
+}
+.ItemsPage .TitleContainer .title_container h2 {
+  color: #e0bb96;
+}
+
+.ItemsPage .TitleContainer .title_container p {
+  color: #cec6be;
+}
+
+.ItemsPage .TitleContainer .title_container .decoration {
+  background-color: rgb(151, 147, 137);
+}
+
+.ItemsPage .TitleContainer .title_container .circle {
+  background-color: rgb(196, 178, 134);
+}
+
+/***************************************************************************************************/
+
+.ItemsPage .TabsContainer {
+  inline-size: 100%;
+  block-size: auto;
+
+  padding-block: 20px;
+
+  padding-inline: 24px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  gap: 20px;
+}
+.ItemsPage .TabsContainer .Title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  /* border-radius: 12px; */
+}
+
+.ItemsPage .TabsContainer .Title .Decorator {
+  inline-size: 120px;
+  block-size: 40px;
+
+  position: relative;
+  left: -12px;
+
+  background-image: url("/decorator_top_logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: brightness(0%);
+}
+
+.ItemsPage .TabsContainer .Title h2 {
+  font-size: 18px;
+  color: rgb(52, 55, 57);
+  font-weight: bold;
+}
+
+.ItemsPage .TabsContainer .Tabs {
+  display: flex;
+  gap: 12px;
+
+  list-style-type: none;
+}
+
+.ItemsPage .TabsContainer .TabsItem {
+  padding: 4px;
+  padding-inline: 8px;
+
+  border: 2px solid rgb(133, 125, 78);
+
+  border-radius: 18px;
+
+  font-size: 14px;
+
+  color: #262b31;
+
+  cursor: pointer;
+}
+
+.ItemsPage .TabsContainer .TabsItem.selected {
+  background-color: #262b31;
+  color: rgb(216, 205, 141);
+}
+
+/*******************************************************************************************/
+
+.ItemsPage .ListItem {
+  inline-size: 100%;
+  block-size: 440px;
+  margin: 0 auto;
+  padding-block: 20px;
+  padding-inline-start: 20px;
+  list-style: none;
+
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.ItemsPage .ListItem li {
+  inline-size: 280px;
+  block-size: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-block-start: 20px;
+
+  position: relative;
+
+  background-color: rgb(235, 235, 235);
+
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.228);
+  overflow: hidden;
+}
+
+.ItemsPage .ListItem li .content {
+  inline-size: 100%;
+  block-size: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 1;
+}
+
+.ItemsPage .ListItem li .content span.title {
+  font-size: 18px;
+  font-weight: bold;
+
+  color: rgb(220, 221, 225);
+}
+
+.ItemsPage .ListItem li .content span.amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 44px;
+
+  color: white;
+}
+
+.ItemsPage .ListItem li .pattern {
+  inline-size: 360px;
+  block-size: 240px;
+
+  position: absolute;
+
+  top: -100px;
+  left: -30px;
+  /* background-image: url("/pattern.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+  border-radius: 40px;
+  box-shadow: 3px 3px 6px rgba(73, 71, 71, 0.258);
+  transform: rotateZ(-15deg);
+
+  z-index: 0;
+}
+
+.ItemsPage .ListItem li:nth-of-type(5n + 2) .pattern {
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+}
+.ItemsPage .ListItem li:nth-of-type(5n + 3) .pattern {
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+}
+.ItemsPage .ListItem li:nth-of-type(5n + 4) .pattern {
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.ItemsPage .ListItem li .circle {
+  inline-size: 180px;
+  block-size: 180px;
+
+  position: absolute;
+
+  top: -120px;
+  left: -100px;
+
+  border-radius: 100%;
+
+  background-color: rgba(255, 255, 255, 0.121);
+
+  mix-blend-mode: soft-light;
+
+  z-index: 1;
+}
+
+.ItemsPage .ListItem li .circle:nth-of-type(3) {
+  inline-size: 280px;
+  block-size: 280px;
+
+  top: -120px;
+  left: -220px;
+}
+.ItemsPage .ListItem li .circle:nth-of-type(4) {
+  inline-size: 180px;
+  block-size: 180px;
+
+  top: -140px;
+  left: -20px;
+}
+
+.ItemsPage .ListItem li .Actions {
+  margin-block-start: 120px;
+}
+.ItemsPage .ListItem li .Actions a {
+  padding: 10px;
+  padding-inline: 40px;
+  border: 2px solid rgb(68, 68, 70);
+  color: #7b6c38;
+  border-radius: 20px;
+
+  font-size: 16px;
+  font-weight: bold;
+}

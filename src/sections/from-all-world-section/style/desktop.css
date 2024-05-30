@@ -1,13 +1,37 @@
 .FromAllWorldSection {
   inline-size: 100%;
-  block-size: 600px;
+  block-size: 800px;
+
+  padding-block-start: 200px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: rgb(151, 118, 82);
+  position: relative;
+
+  background-color: rgb(3, 11, 28);
   overflow: hidden;
+}
+
+.FromAllWorldSection > .Decorator {
+  inline-size: 100%;
+  block-size: 400px;
+
+  position: absolute;
+  top: -180px;
+
+  background-image: url("/hero-background.webp");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  filter: blur(1px) grayscale(80%) brightness(140%) contrast(100%);
+
+  transform: rotateY(180deg) rotateZ(180deg);
+
+  mix-blend-mode: soft-light;
+  z-index: 0;
 }
 
 .FromAllWorldSection .ContentContainer {

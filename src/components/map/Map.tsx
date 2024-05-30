@@ -1,111 +1,92 @@
-"useClient";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import "./style/desktop.css";
 import PathEffect, { IPath, IPoint } from "./PathEffect";
 
-const POSITION_CUBA: IPoint = { x: 110, y: 380 };
+const POSITION_CUBA: IPoint = { x: 112, y: 380 };
 const PositionsData = [
   {
-    init: { x: 400, y: 270 },
+    _id: "spain",
+    init: { x: 312, y: 326 },
     end: POSITION_CUBA,
   },
-  // {
-  //   init: { x: 420, y: 296 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 400, y: 296 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 400, y: 346 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 480, y: 526 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 200, y: 190 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 90, y: 180 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 90, y: 240 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 50, y: 260 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 50, y: 220 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 60, y: 340 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 160, y: 440 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 240, y: 500 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 200, y: 540 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 200, y: 480 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 200, y: 400 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 500, y: 390 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 860, y: 505 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 820, y: 490 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 720, y: 320 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 700, y: 300 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 600, y: 310 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 610, y: 110 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 700, y: 140 },
-  //   end: POSITION_CUBA,
-  // },
-  // {
-  //   init: { x: 640, y: 180 },
-  //   end: POSITION_CUBA,
-  // },
+  {
+    _id: "portugal",
+    init: { x: 300, y: 326 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "italy",
+    init: { x: 355, y: 330 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "england",
+    init: { x: 305, y: 280 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "france",
+    init: { x: 330, y: 290 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "suecia",
+    init: { x: 355, y: 260 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "canada_north",
+    init: { x: 25, y: 260 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "canada_west",
+    init: { x: 85, y: 280 },
+    end: POSITION_CUBA,
+  },
+
+  {
+    _id: "us_north",
+    init: { x: 75, y: 340 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "us_south",
+    init: { x: 45, y: 320 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "mexico_north",
+    init: { x: 45, y: 360 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "mexico_south",
+    init: { x: 55, y: 390 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "colombia",
+    init: { x: 140, y: 420 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "panama",
+    init: { x: 144, y: 490 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "brasil",
+    init: { x: 174, y: 460 },
+    end: POSITION_CUBA,
+  },
+  {
+    _id: "argentina",
+    init: { x: 168, y: 560 },
+    end: POSITION_CUBA,
+  },
 ];
 export default function Map() {
   const [paths, setPaths] = useState<IPath[]>([]);
@@ -125,13 +106,13 @@ export default function Map() {
   useEffect(() => {
     setPaths([...PositionsData]);
 
-    // const intervalId = setInterval(() => {
-    //   addPosition();
-    //   setPaths([...usedPositions.current]);
-    // }, 1000);
-    // return () => {
-    //   clearInterval(intervalId);
-    // };
+    const intervalId = setInterval(() => {
+      addPosition();
+      setPaths([...usedPositions.current]);
+    }, 1000);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
   const PathComponents = paths.map((el) => {

@@ -5,7 +5,7 @@
   flex-shrink: 0;
 
   transform-origin: center;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 .MapContainer .Map {
@@ -16,8 +16,8 @@
   mask-repeat: no-repeat;
   mask-size: contain;
 
-  background-color: rgb(158, 161, 173);
-  mix-blend-mode: multiply;
+  background-color: rgb(220, 222, 231);
+  mix-blend-mode: soft-light;
 }
 
 .MapContainer svg {

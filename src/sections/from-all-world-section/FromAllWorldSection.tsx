@@ -4,6 +4,8 @@ import "./style/desktop.css";
 export default function FromAllWorldSection() {
   return (
     <section className="FromAllWorldSection">
+      <div className="Decorator"></div>
+
       <div className="ContentContainer">
         <h2>Tu Enlace Directo: Remesas a Cuba desde el mundo</h2>
       </div>

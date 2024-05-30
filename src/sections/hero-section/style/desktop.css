@@ -8,7 +8,9 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+
+  gap: 120px;
 
   position: relative;
 
@@ -20,7 +22,7 @@
   block-size: 400px;
 
   position: absolute;
-  bottom: -80px;
+  bottom: -180px;
 
   background-image: url("/hero-background.webp");
   background-size: 120%;
@@ -66,7 +68,7 @@
   animation-fill-mode: both;
 }
 .HeroSection .HeroTitle h1 {
-  inline-size: 580px;
+  inline-size: 540px;
   font-size: 60px;
   line-height: 72px;
 

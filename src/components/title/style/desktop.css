@@ -1,9 +1,9 @@
-.TitleContainer .Content h2 {
+.title_container .Content h2 {
   inline-size: 480px;
   padding: 8px;
 }
 
-.TitleContainer .Content h2 {
+.title_container .Content h2 {
   inline-size: 100%;
   font-size: 40px;
   line-height: 48px;
@@ -12,7 +12,7 @@
   font-weight: 600;
 }
 
-.TitleContainer .Content p {
+.title_container .Content p {
   inline-size: 100%;
   font-size: 20px;
   text-align: center;
@@ -20,7 +20,7 @@
   font-weight: 600;
 }
 
-.TitleContainer .DecorationContainer {
+.title_container .decoration_container {
   margin-block-start: 4px;
 
   display: flex;
@@ -28,7 +28,7 @@
   justify-content: center;
 }
 
-.TitleContainer .DecorationContainer .Decoration {
+.title_container .decoration_container .decoration {
   inline-size: 160px;
   block-size: 48px;
 
@@ -39,11 +39,11 @@
   mask-position: center;
 }
 
-.TitleContainer .DecorationContainer .Decoration:nth-of-type(1) {
+.title_container .decoration_container .decoration:nth-of-type(1) {
   transform: rotateZ(180deg) rotateX(180deg);
 }
 
-.TitleContainer .DecorationContainer .Circle {
+.title_container .decoration_container .circle {
   inline-size: 32px;
   block-size: 32px;
   border-radius: 100%;
