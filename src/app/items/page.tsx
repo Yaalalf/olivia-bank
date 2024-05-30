@@ -35,7 +35,7 @@ export default function Items() {
       </div>
 
       <ul className="ListItem">
-        {data[selected].map((el) => (
+        {data[selected].map((el: Item) => (
           <li key={el.amount}>
             <div className="pattern"></div>
             <div className="circle"></div>
@@ -57,7 +57,13 @@ export default function Items() {
   );
 }
 
-const eur = [
+interface Item {
+  title: string;
+  amount: number;
+  link: string;
+}
+
+const eur: Item[] = [
   {
     title: "medium EUR tranfer",
 
@@ -86,7 +92,7 @@ const eur = [
   },
 ];
 
-const cup = [
+const cup: Item[] = [
   {
     title: "micro CUP tranfer",
     amount: 5,
@@ -168,7 +174,7 @@ const cup = [
   },
 ];
 
-const mlc = [
+const mlc: Item[] = [
   {
     title: "micro MLC tranfer",
     amount: 20,
@@ -245,7 +251,7 @@ const mlc = [
   },
 ];
 
-const usd = [
+const usd: Item[] = [
   {
     title: "micro USD tranfer",
     amount: 20,
@@ -286,7 +292,13 @@ const usd = [
   },
 ];
 
-const data = {
+const data: {
+  [key: string]: Item[];
+  EUR: Item[];
+  CUP: Item[];
+  MLC: Item[];
+  USD: Item[];
+} = {
   EUR: eur,
   CUP: cup,
   MLC: mlc,

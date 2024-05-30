@@ -31,25 +31,27 @@ export default function PathEffect({
   });
 
   function initEventListener() {
-    ref.current.addEventListener("animationend", (event) => {
-      if (event.animationName == "dash") {
-        ref.current.style.animationName = "dashExit";
-        ref.current.style.animationDelay = "0s";
-        setDelay("0s");
-        setPath({
-          init: currentPath.end,
-          end: currentPath.init,
-          firstVezier: currentPath.secondVezier,
-          secondVezier: currentPath.firstVezier,
-        });
-      }
-    });
+    if (ref.current) {
+      ref.current.addEventListener("animationend", (event) => {
+        if (event.animationName == "dash" && ref.current != null) {
+          ref.current.style.animationName = "dashExit";
+          ref.current.style.animationDelay = "0s";
+          setDelay("0s");
+          setPath({
+            init: currentPath.end,
+            end: currentPath.init,
+            firstVezier: currentPath.secondVezier,
+            secondVezier: currentPath.firstVezier,
+          });
+        }
+      });
 
-    ref.current.addEventListener("animationend", (event) => {
-      if (event.animationName == "dashExit") {
-        onFinishPath();
-      }
-    });
+      ref.current.addEventListener("animationend", (event) => {
+        if (event.animationName == "dashExit") {
+          onFinishPath();
+        }
+      });
+    }
   }
 
   return (
