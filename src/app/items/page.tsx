@@ -46,7 +46,10 @@ export default function Items() {
               <span className="amount">{el.amount}$</span>
             </div>
             <div className="Actions">
-              <a href={el.link} target="_blank">
+              <a
+                href={`https://api.whatsapp.com/send?text=${el.link}`}
+                target="_blank"
+              >
                 Adquirir
               </a>
             </div>
