@@ -173,7 +173,51 @@
 }
 
 /*******************************************************************************************/
+.ItemsPage .TasaDeCambio label {
+  padding-inline-start: 20px;
 
+  display: flex;
+  gap: 8px;
+  font-weight: 500;
+  color: #7b6c38;
+}
+
+.ItemsPage .TasaDeCambio .InputContainer {
+  inline-size: 88px;
+  padding-inline: 12px;
+  color: rgb(216, 205, 141);
+  border-radius: 20px;
+  border: 2px solid rgb(133, 125, 78);
+  background-color: rgb(50, 52, 56);
+}
+
+.ItemsPage .TasaDeCambio .InputContainer span {
+}
+
+.ItemsPage .TasaDeCambio .InputContainer .InputNumber {
+  inline-size: 70%;
+  outline: none;
+  text-align: end;
+  margin-inline-end: 4px;
+
+  background-color: transparent;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+.ItemsPage .TasaDeCambio .InputNumber::-webkit-outer-spin-button,
+.ItemsPage .TasaDeCambio .InputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+.ItemsPage .TasaDeCambio input[type="number"].InputNumber {
+  -moz-appearance: textfield;
+}
+
+/**************************************************************************************************/
 .ItemsPage .ListItem {
   inline-size: 100%;
   block-size: 440px;
@@ -236,6 +280,47 @@
   font-size: 44px;
 
   color: white;
+}
+.ItemsPage .ListItem li .content span.amount span.Small {
+  padding-inline: 4px;
+  font-size: 12px;
+}
+
+.ItemsPage .ListItem li .content span.amount span.Symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 400;
+  font-size: 28px;
+
+  position: relative;
+  top: -8px;
+
+  color: #ececec;
+}
+
+.ItemsPage .ListItem li .content span.amount span.EUR {
+  inline-size: 28px;
+  block-size: 28px;
+  background-image: url("/icons/euro.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ItemsPage .ListItem li .content span.amount span.Symbol.EUR {
+  inline-size: 28px;
+  block-size: 28px;
+  background-image: url("/icons/euro.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ItemsPage .ListItem li .content span.amount span.Symbol.MLC,
+.ItemsPage .ListItem li .content span.amount span.Symbol.CUP {
+  font-size: 20px;
 }
 
 .ItemsPage .ListItem li .pattern {
@@ -312,8 +397,23 @@
   left: -20px;
 }
 
+.ItemsPage .ListItem li .Beneficios {
+  margin-block-start: 100px;
+  margin-block-end: 20px;
+}
+
+.ItemsPage .ListItem li .Beneficios p {
+  padding: 8px;
+  padding-inline: 20px;
+  color: #5b5d61;
+
+  text-align: center;
+}
+.ItemsPage .ListItem li .Beneficios p span {
+  font-weight: 500;
+  color: #389838;
+}
 .ItemsPage .ListItem li .Actions {
-  margin-block-start: 120px;
 }
 .ItemsPage .ListItem li .Actions a {
   padding: 10px;

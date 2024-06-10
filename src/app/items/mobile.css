@@ -139,7 +139,7 @@
   }
   .ItemsPage .ListItem li {
     inline-size: 220px;
-    block-size: 280px;
+    block-size: 340px;
 
     display: flex;
     flex-direction: column;
@@ -266,8 +266,9 @@
     left: -20px;
   }
 
-  .ItemsPage .ListItem li .Actions {
-    margin-block-start: 120px;
+  .ItemsPage .ListItem li .Beneficios {
+    margin-block-start: 72px;
+    margin-block-end: 20px;
   }
   .ItemsPage .ListItem li .Actions a {
     padding: 10px;

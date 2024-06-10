@@ -4,10 +4,15 @@ import Title from "@/components/title/Title";
 import TabsPanel from "@/components/tabs/TabsPanel";
 import "./desktop.css";
 import "./mobile.css";
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 
 export default function Items() {
-  const [selected, setSelected] = useState("EUR");
+  const [selected, setSelected] = useState({
+    type: "EUR",
+    category: "efetivo",
+  });
+
+  const [tasa, setTasa] = useState(400);
 
   return (
     <div className="ItemsPage">
@@ -33,33 +38,93 @@ export default function Items() {
           onChangeSelected={(selected) => setSelected(selected)}
         />
       </div>
-
+      {selected.type == "CUP" && (
+        <div className="TasaDeCambio">
+          <label>
+            Tasa de Cambio{" "}
+            <div className="InputContainer">
+              <input
+                className="InputNumber"
+                type="number"
+                value={tasa}
+                onChange={(e) => setTasa(Number(e.target.value))}
+              />
+              <span>$</span>
+            </div>
+          </label>
+        </div>
+      )}
       <ul className="ListItem">
-        {data[selected].map((el: Item) => (
-          <li key={el.amount}>
-            <div className="pattern"></div>
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="content">
-              <span className="title">{el.title}</span>
-              <span className="amount">{el.amount}$</span>
-            </div>
-            <div className="Actions">
-              <a
-                href={`https://api.whatsapp.com/send?text=${el.link}`}
-                target="_blank"
-              >
-                Adquirir
-              </a>
-            </div>
-          </li>
-        ))}
+        {data[selected.type].map((el: Item) => {
+          let symbol: ReactNode | string = <span></span>;
+          switch (selected.type) {
+            case "EUR":
+              symbol = <span className="Symbol EUR"></span>;
+              break;
+            case "USD":
+              symbol = <span className="Symbol USD">$</span>;
+              break;
+            case "MLC":
+              symbol = <span className="Symbol MLC">MLC</span>;
+              break;
+            case "CUP":
+              symbol = <span className="Symbol CUP">CUP</span>;
+              break;
+          }
+          return (
+            <li key={el.amount}>
+              <div className="pattern"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="circle"></div>
+              <div className="content">
+                <span className="title">{el.title}</span>
+                <span className="amount">
+                  {el.amount}
+                  {selected.type == "CUP" ? (
+                    <span className="Symbol CUP">
+                      <span className="EUR"></span>
+                      <span className="Small"> en </span> CUP
+                    </span>
+                  ) : (
+                    <span className="Symbol CUP">
+                      <span className="EUR"></span>
+                    </span>
+                  )}
+                </span>
+              </div>
+              <div className="Beneficios">
+                <p>
+                  Recibe{" "}
+                  <span>
+                    {selected.type == "CUP"
+                      ? el.amount * tasa * 0.8
+                      : el.amount}{" "}
+                    {selected.type}
+                  </span>{" "}
+                  en {selected.category}
+                </p>
+              </div>
+              <div className="Actions">
+                <a
+                  href={`https://api.whatsapp.com/send?text=${el.link}`}
+                  target="_blank"
+                >
+                  Adquirir
+                </a>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
 }
 
+interface Category {
+  type: string;
+  delivery: string;
+}
 interface Item {
   title: string;
   amount: number;
@@ -69,21 +134,18 @@ interface Item {
 const eur: Item[] = [
   {
     title: "medium EUR tranfer",
-
     amount: 50,
     link: "https://buy.stripe.com/fZe2b9gLp20B7Cg9Bg",
   },
 
   {
     title: "high EUR tranfer",
-
     amount: 100,
     link: "https://buy.stripe.com/9AQ4jhfHlbBb3m06p5",
   },
 
   {
     title: "ultra EUR tranfer",
-
     amount: 150,
     link: "https://buy.stripe.com/aEUeXV8eT9t3f4I28Q",
   },
@@ -185,64 +247,54 @@ const mlc: Item[] = [
   },
   {
     title: "small MLC tranfer",
-
     amount: 25,
     link: "https://buy.stripe.com/8wM7vt7aP6gRbSw5kP",
   },
   {
     title: "small MLC tranfer",
-
     amount: 30,
     link: "https://buy.stripe.com/eVa2b90MreNn6yccNi",
   },
 
   {
     title: "small MLC tranfer",
-
     amount: 40,
     link: "https://buy.stripe.com/dR6dTRfHlax709OdRn",
   },
   {
     title: "medium MLC tranfer",
-
     amount: 50,
     link: "https://buy.stripe.com/eVa8zx0MreNn8Gk5kS",
   },
   {
     title: "medium MLC tranfer",
-
     amount: 60,
     link: "https://buy.stripe.com/fZecPN3YDgVvg8M6oX",
   },
   {
     title: "medium MLC tranfer",
-
     amount: 70,
     link: "https://buy.stripe.com/aEU7vtcv948JaOscNm",
   },
 
   {
     title: "medium MLC tranfer",
-
     amount: 80,
     link: "https://buy.stripe.com/cN20318eT6gRf4I5kV",
   },
   {
     title: "high MLC tranfer",
-
     amount: 90,
     link: "https://buy.stripe.com/7sIeXVbr5gVv8Gk5kW",
   },
   {
     title: "high MLC tranfer",
-
     amount: 100,
     link: "https://buy.stripe.com/14k6rp52H20BaOs14H",
   },
 
   {
     title: "ultra MLC tranfer",
-
     amount: 150,
     link: "https://buy.stripe.com/4gwbLJbr520B09O00E",
   },
@@ -262,28 +314,24 @@ const usd: Item[] = [
   },
   {
     title: "small USD tranfer",
-
     amount: 30,
     link: "https://buy.stripe.com/5kAcPN3YD0Wxg8M4h1",
   },
 
   {
     title: "medium USD tranfer",
-
     amount: 50,
     link: "https://buy.stripe.com/6oEaHFdzd34FcWA5l6",
   },
 
   {
     title: "high USD tranfer",
-
     amount: 100,
     link: "https://buy.stripe.com/bIYdTR0MreNncWA3cZ",
   },
 
   {
     title: "ultra USD tranfer",
-
     amount: 150,
     link: "https://buy.stripe.com/8wM9DBbr5gVve0E4h4",
   },
