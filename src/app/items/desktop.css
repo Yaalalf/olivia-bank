@@ -398,20 +398,52 @@
 }
 
 .ItemsPage .ListItem li .Beneficios {
-  margin-block-start: 100px;
+  margin-block-start: 88px;
   margin-block-end: 20px;
 }
 
 .ItemsPage .ListItem li .Beneficios p {
   padding: 8px;
-  padding-inline: 20px;
+  margin-inline: 20px;
   color: #5b5d61;
-
+  border: 2px solid #616772;
   text-align: center;
+
+  border-end-start-radius: 8px;
+  border-end-end-radius: 8px;
 }
 .ItemsPage .ListItem li .Beneficios p span {
   font-weight: 500;
   color: #389838;
+}
+
+.ItemsPage .ListItem li .Beneficios p.Cost {
+  background-color: #616772;
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+
+  border-end-start-radius: 0px;
+  border-end-end-radius: 0px;
+  color: rgb(233, 235, 239);
+}
+.ItemsPage .ListItem li .Beneficios p.Cost span {
+  color: #d8cd8d;
+}
+.ItemsPage .ListItem li .Beneficios p.Cost span.EUR {
+  inline-size: 18px;
+  block-size: 18px;
+
+  display: inline-block;
+
+  position: relative;
+  top: 3.5px;
+  left: -3px;
+
+  background-color: #d8cd8d;
+  mask-image: url("/icons/euro.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
 }
 .ItemsPage .ListItem li .Actions {
 }
