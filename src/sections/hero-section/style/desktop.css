@@ -1,8 +1,8 @@
 .HeroSection {
   inline-size: 100%;
-  block-size: 800px;
+  block-size: 960px;
 
-  padding-block-start: 80px;
+  padding-block-start: 140px;
 
   background-color: rgb(3, 11, 28);
 
@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 
-  gap: 120px;
+  gap: 40px;
 
   position: relative;
 
@@ -22,7 +22,7 @@
   block-size: 400px;
 
   position: absolute;
-  bottom: -180px;
+  bottom: -60px;
 
   background-image: url("/hero-background.webp");
   background-size: 120%;
@@ -121,136 +121,4 @@
   animation: slideInSmall 700ms ease-in-out;
   animation-delay: 250ms;
   animation-fill-mode: both;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(500px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInSmall {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-500px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideOutSmall {
-  from {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideLeftIn {
-  from {
-    transform: translateX(500px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideLeftInSmall {
-  from {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideLeftOut {
-  from {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideLeftOutSmall {
-  from {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideRightIn {
-  from {
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRightInSmall {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRightOut {
-  from {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(500px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideRightOutSmall {
-  from {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100px);
-    opacity: 0;
-  }
 }

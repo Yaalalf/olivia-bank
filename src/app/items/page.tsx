@@ -22,7 +22,7 @@ export default function Items() {
 
         <Title
           title="Seleccione el producto"
-          description="Una vez realizado el pago se procedera ha ahcer la transferencia"
+          description="Una vez realizado el pago, se procederá a transferir el monto."
           decoration
         />
         <div className="DecoratorBackground"></div>

@@ -7,3 +7,208 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+/***********************************Ripple**********************************************/
+span.yl-ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.427);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+
+.yl-ripple-animation {
+  animation: yl-ripple 0.5s linear;
+}
+
+@keyframes yl-ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/***********************************Animations***********************************/
+
+@keyframes slideIn {
+  from {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInSmall {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutSmall {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftIn {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftInSmall {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeftOut {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideLeftOutSmall {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRightIn {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightInSmall {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideRightOutSmall {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleCenterInSmall {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes scaleCenterOutSmall {
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes climbOne {
+  0% {
+    translate: 100px;
+  }
+  50% {
+    translate: 0px;
+  }
+  100% {
+    translate: 100px;
+  }
+}
+
+@keyframes climbTwo {
+  0% {
+    translate: -50px;
+  }
+  50% {
+    translate: 0px;
+  }
+  100% {
+    translate: -50px;
+  }
+}

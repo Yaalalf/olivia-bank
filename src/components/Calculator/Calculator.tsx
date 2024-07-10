@@ -5,6 +5,7 @@ import InputNumber from "../InputNumber/InputNumber";
 import Select from "../Select/Select";
 import "./style/desktop.css";
 import "./style/mobile.css";
+import YLSelect from "../Library/yl-select/yl-select";
 
 export default function Calculator() {
   const selectSendOptions = [
@@ -19,33 +20,86 @@ export default function Calculator() {
     { value: "MLC", icon: "/icons/dolar.svg" },
   ];
 
-  const [sendValue, setSendValue] = useState(0);
-  const [isSendValue, setIsSendValue] = useState(false);
+  const [sendValue, setSendValue] = useState(100);
+  const [isSendValue, setIsSendValue] = useState(true);
 
-  const [receivValue, setReceivValue] = useState(0);
+  const [receivValue, setReceivValue] = useState(40000);
   const [isReceivValue, setIsReceivValue] = useState(false);
 
   const [selectSendValue, setSelectSendValue] = useState(selectSendOptions[0]);
   const [selectReceivValue, setSelectReceivValue] = useState(
-    selectSendOptions[0]
+    selectReceivOptions[2]
   );
+
+  const [currentChange, setCurrentChange] = useState(400);
 
   useEffect(() => {
     if (isSendValue) {
-      setReceivValue(Number((sendValue * 190).toFixed(2)));
+      setReceivValue(Number((sendValue * currentChange).toFixed(2)));
     }
-  }, [sendValue, isSendValue]);
+  }, [sendValue, isSendValue, currentChange]);
   useEffect(() => {
     if (isReceivValue) {
-      setSendValue(Number((receivValue / 190).toFixed(2)));
+      setSendValue(Number((receivValue / currentChange).toFixed(2)));
     }
-  }, [receivValue, isReceivValue]);
+  }, [receivValue, isReceivValue, currentChange]);
+
+  useEffect(() => {
+    console.log("me active", selectReceivValue.value);
+
+    switch (selectReceivValue.value) {
+      case "CUP":
+        switch (selectSendValue.value) {
+          case "EUR":
+            setCurrentChange(450);
+            break;
+
+          case "USD":
+            setCurrentChange(400);
+            break;
+        }
+        break;
+      case "USD":
+        switch (selectSendValue.value) {
+          case "EUR":
+            setCurrentChange(1.1);
+            break;
+
+          case "USD":
+            setCurrentChange(0.9);
+            break;
+        }
+        break;
+      case "MLC":
+        switch (selectSendValue.value) {
+          case "EUR":
+            setCurrentChange(1.0);
+            break;
+
+          case "USD":
+            setCurrentChange(0.7);
+            break;
+        }
+        break;
+      case "EUR":
+        switch (selectSendValue.value) {
+          case "EUR":
+            setCurrentChange(0.9);
+            break;
+
+          case "USD":
+            setCurrentChange(0.6);
+            break;
+        }
+        break;
+    }
+  }, [selectReceivValue, selectSendValue]);
 
   return (
     <div className="CalculatorContainer">
       <div className="Calculator">
-        <div className="PhoneDecoration Blur"></div>
-        <div className="PhoneDecoration"></div>
+        <div className="MockupDecoration Blur"></div>
+        <div className="MockupDecoration"></div>
 
         <div className="Card">
           <div className="CardTitle">
@@ -58,6 +112,8 @@ export default function Calculator() {
               <div className="Decoration"></div>
             </div>
           </div>
+
+          <p>Escriba la cantidad a enviar o a recibir</p>
 
           <div className="Inputs">
             <div className="InputContainer">
@@ -74,7 +130,7 @@ export default function Calculator() {
                   ></span>
                 }
                 posfix={
-                  <Select
+                  <YLSelect
                     className="Select"
                     value={selectSendValue}
                     onChange={setSelectSendValue}
@@ -102,7 +158,7 @@ export default function Calculator() {
                   ></span>
                 }
                 posfix={
-                  <Select
+                  <YLSelect
                     className="Select"
                     value={selectReceivValue}
                     onChange={setSelectReceivValue}
@@ -123,14 +179,29 @@ export default function Calculator() {
               <span>
                 {sendValue} {selectSendValue.value}
               </span>{" "}
-              su remitente recibira
+              su remitente recibira{" "}
               <span>
-                {receivValue} {selectReceivValue.value}, en su tarjeta al
-                instante
+                {receivValue} {selectReceivValue.value}
               </span>
+              ,{" "}
+              {`en ${
+                selectReceivValue.value == "MLC"
+                  ? "su tarjeta al instante"
+                  : selectReceivValue.value == "CUP"
+                  ? "su tarjeta al instante" +
+                    " o en efectivo en menos de 24 horas"
+                  : "efectivo en menos de 24 horas"
+              }`}
             </p>
 
             <button>Realizar Envio</button>
+          </div>
+
+          <div className="DecorationContainer">
+            <div className="Decoration"></div>
+            <div className="Decoration"></div>
+            <div className="Decoration"></div>
+            <div className="Decoration"></div>
           </div>
         </div>
       </div>

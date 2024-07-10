@@ -1,0 +1,38 @@
+.AnimatedVisibilityObserver {
+  inline-size: 100%;
+  block-size: auto;
+  position: relative;
+}
+.AnimatedVisibilityObserver .AnimatedContainer {
+  inline-size: 100%;
+  block-size: 100%;
+  visibility: visible;
+
+  opacity: 0;
+
+  animation: slideInSmall ease-in-out forwards 1000ms;
+  animation-name: none;
+}
+
+.AnimatedVisibilityObserver .AnimatedContainer.hidden {
+  visibility: hidden;
+}
+/***********************Animations************************/
+.AnimatedContainer.pending {
+  animation-name: none;
+}
+
+.AnimatedVisibilityObserver .AnimatedContainer.init {
+  animation-name: var(--animation-init-name);
+}
+.AnimatedVisibilityObserver .AnimatedContainer.exit {
+  animation-name: var(--animation-end-name);
+}
+
+.AnimatedVisibilityObserver .animated-observer {
+  block-size: 0px;
+
+  position: absolute;
+  top: auto;
+  bottom: 40px;
+}

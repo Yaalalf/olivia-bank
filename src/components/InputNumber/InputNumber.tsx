@@ -23,7 +23,7 @@ export default function InputNumber({
 }) {
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     if (onPreviousChange) onPreviousChange();
-    setValue(Number(e.target.value));
+    setValue(Number(e.target.value.replace(/^(0+)/g, "")));
   }
 
   return (

@@ -1,77 +1,80 @@
 .CalculatorContainer {
+  inline-size: 600px;
+  block-size: 400px;
   position: relative;
   top: 0px;
   left: 0px;
 }
 
 .CalculatorContainer .Calculator {
-  block-size: 600px;
+  inline-size: 100%;
+  block-size: 100%;
 
   display: flex;
   align-items: center;
-
-  position: relative;
-  top: 60px;
+  justify-content: center;
 }
 
-.CalculatorContainer .Calculator .PhoneDecoration {
-  inline-size: 400px;
-  block-size: 800px;
+.CalculatorContainer .Calculator .MockupDecoration {
+  inline-size: 100%;
+  block-size: 100%;
 
   position: absolute;
-  top: -6px;
-  left: -18px;
+  top: -60px;
+  left: 0px;
 
-  background-image: url("/phone.webp");
-  background-size: 101%;
+  background-image: url("/laptop_mockup.webp");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
   overflow: hidden;
 
-  animation: slideIn 700ms ease-out;
+  animation: slideInSmall 700ms ease-in-out;
 }
 
-.CalculatorContainer .Calculator .PhoneDecoration.Blur {
-  inline-size: 500px;
-  block-size: 1000px;
-
-  top: -120px;
-  left: -68px;
-
+.CalculatorContainer .Calculator .MockupDecoration.Blur {
   filter: blur(60px);
 
   animation-name: none;
+
+  transform-origin: center;
+  transform: scale(1.5);
 }
 /*****************************Card*****************************/
 .CalculatorContainer .Calculator .Card {
-  inline-size: 332px;
-  block-size: 800px;
+  inline-size: 90%;
+  block-size: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 8px;
+  padding: 12px;
+  padding-block-start: 4px;
+  padding-inline: 20px;
 
   position: relative;
-  top: 120px;
-  left: 12px;
+  top: -80px;
+  left: 0px;
 
-  background-color: #edeff3e5;
-  border-radius: 40px;
+  background-color: #eeecf4;
+  border-radius: 20px;
+  border: 3px solid #4e4c24;
+
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.356);
 
   z-index: 3;
 
-  animation: slideIn 1000ms ease-in-out;
+  animation: scaleCenterInSmall 400ms linear;
   animation-delay: 800ms;
   animation-fill-mode: both;
 
-  overflow: hidden;
+  /* scaleCenterInSmall */
 }
 /********************CardTitle*************************/
 .CalculatorContainer .Calculator .Card .CardTitle {
-  margin-block-start: 20px;
+  inline-size: 100%;
 }
 
 .CalculatorContainer .Calculator .Card .CardTitle .UpdateTime {
@@ -119,29 +122,15 @@
   color: white;
 }
 
-.CalculatorContainer .Calculator .Card .Header {
+.CalculatorContainer .Calculator .Card .CardTitle .Header {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-block-start: 20px;
+  margin-block-start: 0px;
 }
 
-.CalculatorContainer .Calculator .Card .CardTitle p {
-  margin-block: 12px;
-  margin-inline: 8px;
-  padding-inline: 12px;
-  padding-block: 12px;
-
-  background-color: #293433e5;
-  border-radius: 4px;
-
-  font-size: 14px;
-  text-align: center;
-  color: #e3e4ec;
-}
-
-.CalculatorContainer .Calculator .Card .Decoration {
+.CalculatorContainer .Calculator .Card .CardTitle .Header .Decoration {
   inline-size: 80px;
   block-size: 40px;
 
@@ -152,12 +141,18 @@
   mask-position: center;
 }
 
-.CalculatorContainer .Calculator .Card .Decoration:nth-of-type(1) {
-  transform: rotateY(180deg);
+.CalculatorContainer
+  .Calculator
+  .Card
+  .CardTitle
+  .Header
+  .Decoration:nth-of-type(1) {
+  transform: rotateY(181deg);
 }
 
-.CalculatorContainer .Calculator .Card h3 {
-  inline-size: 40%;
+.CalculatorContainer .Calculator .Card .CardTitle .Header h3 {
+  margin-inline: 2px;
+  inline-size: auto;
 
   color: rgb(33, 50, 83);
   font-size: 22px;
@@ -166,14 +161,21 @@
   text-align: center;
 }
 
+.CalculatorContainer .Calculator .Card > p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4e4c24;
+  margin-block-end: 4px;
+}
+
 /*************************Inputs*************************/
 
 .CalculatorContainer .Calculator .Card .Inputs {
-  margin-block-start: 40px;
+  margin-block-start: 12px;
 }
 
 .CalculatorContainer .Calculator .Card .InputContainer {
-  inline-size: 260px;
+  inline-size: 320px;
   margin-block-end: 20px;
 
   display: flex;
@@ -243,7 +245,7 @@
   inline-size: 80px;
 }
 .CalculatorContainer .Calculator .Card .input_standard_posfix .Select {
-  padding-inline: 8px;
+  padding-inline: 12px;
 }
 
 .CalculatorContainer .Calculator .Card .Result {
@@ -281,13 +283,20 @@
 .CalculatorContainer .Calculator .Card .Result p {
   padding: 12px;
 
-  background-color: #c7c7d6;
+  background-color: rgb(23, 39, 71);
 
   border: 2px solid rgb(87, 68, 27);
-  color: rgb(50, 51, 53);
+  color: rgb(218, 222, 230);
   text-align: center;
 
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.473) inset;
+
   border-radius: 4px;
+}
+
+.CalculatorContainer .Calculator .Card .Result p span {
+  color: rgb(234, 203, 170);
+  font-weight: 600;
 }
 
 .CalculatorContainer .Calculator .Card .Result button {
@@ -300,6 +309,76 @@
 
   background-color: #787640;
   color: white;
+  border: 3px solid #4e4c24;
 
   border-radius: 30px;
+}
+/***************************************DecorationContainer******************/
+
+.CalculatorContainer .Calculator .Card .DecorationContainer .Decoration {
+  inline-size: 120px;
+  block-size: 120px;
+
+  position: absolute;
+  right: -92px;
+  bottom: -50px;
+
+  background-image: url("/decoration_leaf.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: rotateZ(80deg);
+}
+.CalculatorContainer
+  .Calculator
+  .Card
+  .DecorationContainer
+  .Decoration:nth-of-type(2) {
+  inline-size: 120px;
+  block-size: 120px;
+
+  position: absolute;
+  right: auto;
+  bottom: auto;
+  top: -80px;
+  left: -40px;
+
+  transform-origin: center;
+  transform: rotateZ(-60deg) scale(0.5);
+}
+.CalculatorContainer
+  .Calculator
+  .Card
+  .DecorationContainer
+  .Decoration:nth-of-type(3) {
+  inline-size: 120px;
+  block-size: 120px;
+
+  position: absolute;
+  right: auto;
+  bottom: auto;
+  top: -40px;
+  left: -88px;
+
+  transform-origin: center;
+  transform: rotateZ(-140deg) scale(0.7);
+}
+
+.CalculatorContainer
+  .Calculator
+  .Card
+  .DecorationContainer
+  .Decoration:nth-of-type(4) {
+  inline-size: 120px;
+  block-size: 120px;
+
+  position: absolute;
+  right: auto;
+  bottom: auto;
+  top: 0px;
+  left: -68px;
+
+  transform-origin: center;
+  transform: rotateZ(-190deg) scale(0.3);
 }

@@ -1,0 +1,18 @@
+@layer yl-icon {
+  .yl-icon {
+    inline-size: auto;
+    block-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .yl-icon .yl-icon-container {
+    inline-size: 100%;
+    block-size: 100%;
+
+    background-color: rgb(33, 32, 32);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}

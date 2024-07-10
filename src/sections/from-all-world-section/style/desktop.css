@@ -1,11 +1,109 @@
-.FromAllWorldSection {
+/*************************************Rating****************************/
+.Rating {
   inline-size: 100%;
-  block-size: 800px;
 
-  padding-block-start: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 0px;
+  top: 900px;
+
+  z-index: 12;
+}
+.Rating h3 {
+  inline-size: calc(240px * 3);
+
+  padding-inline-start: 20px;
+  padding-block-end: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(231, 228, 239);
+}
+.Rating .RatingContainer {
+  inline-size: auto;
 
   display: flex;
   align-items: center;
+
+  background-color: rgb(227, 232, 241);
+  box-shadow: 3px 3px 6px black;
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.Rating .RatingContainer .RatingItem {
+  inline-size: 240px;
+  block-size: 120px;
+  padding: 0px;
+  padding-inline: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+}
+
+.Rating .RatingContainer .RatingItem:nth-of-type(2n + 1) {
+  background-color: #adac76;
+}
+
+.Rating .RatingContainer .RatingItem .Number {
+  font-size: 32px;
+  font-weight: 900;
+  color: rgb(6 13 30);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.189);
+}
+
+.Rating .RatingContainer .RatingItem .Text {
+  inline-size: 50%;
+  color: #43421f;
+  font-weight: 600;
+}
+
+.Rating .RatingContainer .RatingItem .DecorationIcon {
+  inline-size: 60px;
+  block-size: 100%;
+
+  position: absolute;
+  top: 0px;
+  right: 20px;
+
+  background-color: white;
+  mask-image: url("/icons/mobile-icon.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  transform: rotateZ(-45deg);
+}
+.Rating .RatingContainer .RatingItem:nth-of-type(2) .DecorationIcon {
+  background-color: #43421f;
+  mask-image: url("/icons/payments.svg");
+
+  transform: rotateZ(45deg);
+}
+
+.Rating .RatingContainer .RatingItem:nth-of-type(3) .DecorationIcon {
+  mask-image: url("/icons/credit-card-icon.svg");
+
+  transform: rotateZ(45deg);
+}
+/**********************************FromAllWorldSection*********************************/
+.FromAllWorldSection {
+  inline-size: 100%;
+  block-size: auto;
+
+  padding-block-start: 200px;
+  padding-block-end: 120px;
+
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
 
   position: relative;
@@ -19,7 +117,7 @@
   block-size: 400px;
 
   position: absolute;
-  top: -180px;
+  top: -60px;
 
   background-image: url("/hero-background.webp");
   background-size: 120%;
@@ -34,9 +132,15 @@
   z-index: 0;
 }
 
+/******************************************ContentContainer***********************/
 .FromAllWorldSection .ContentContainer {
   inline-size: 100%;
   block-size: 100%;
+
+  position: relative;
+  left: 120px;
+
+  padding-block-start: 200px;
 
   display: flex;
   flex-direction: column;
@@ -44,7 +148,118 @@
   justify-content: center;
 }
 
-.FromAllWorldSection .ContentContainer h2 {
+.FromAllWorldSection .ContentContainer .SectionTitle {
   inline-size: 400px;
-  font-size: 36px;
+
+  margin-block-end: 20px;
+
+  position: relative;
+
+  color: white;
+}
+.FromAllWorldSection .ContentContainer .SectionTitle h2 {
+  font-size: 48px;
+  line-height: 56px;
+  color: #eacbaa;
+}
+
+.FromAllWorldSection .ContentContainer .SectionTitle .Decoration {
+  inline-size: 100px;
+  block-size: 100px;
+
+  position: absolute;
+  right: -56px;
+  bottom: -50px;
+
+  background-color: #eacbaa;
+
+  mask-image: url("/decoration_leaf.png");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+
+  transform: rotateZ(80deg);
+}
+
+.FromAllWorldSection .ContentContainer p {
+  inline-size: 400px;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  color: rgb(199, 205, 218);
+}
+
+/**************************DecorationContainer*******************/
+.FromAllWorldSection .DecorationContainer {
+  inline-size: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+}
+
+.FromAllWorldSection .DecorationImage.One {
+  inline-size: 200px;
+  block-size: 200px;
+
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+  background-image: url("/familia-cubana.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+
+  opacity: 1;
+
+  filter: opacity(80%);
+}
+.FromAllWorldSection .DecorationImage.Two {
+  inline-size: 300px;
+  block-size: 300px;
+
+  position: relative;
+
+  top: 0px;
+  left: 0px;
+
+  background-image: url("/familia-cubana-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+
+  opacity: 1;
+
+  filter: opacity(80%);
+}
+.FromAllWorldSection .DecorationImage.Three {
+  inline-size: 200px;
+  block-size: 200px;
+
+  position: relative;
+  top: 0px;
+  left: 0px;
+
+  background-image: url("/familia-cubana-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 20px;
+
+  opacity: 1;
+
+  filter: opacity(80%);
 }

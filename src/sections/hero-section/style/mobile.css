@@ -16,8 +16,26 @@
     overflow: hidden;
   }
 
-  .HeroSection .HeroTitle {
+  .HeroSection > .Decorator {
     inline-size: 100%;
+    block-size: 400px;
+
+    position: absolute;
+    bottom: 0px;
+
+    background-image: url("/hero-background.webp");
+    background-size: 400%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    filter: blur(0px) grayscale(40%) brightness(180%) contrast(100%);
+
+    mix-blend-mode: soft-light;
+    z-index: 0;
+  }
+
+  .HeroSection .HeroTitle {
+    inline-size: 90%;
     text-align: center;
     position: static;
     margin-block-end: 80px;
@@ -34,7 +52,7 @@
   }
   .HeroSection .HeroTitle h1 {
     inline-size: 100%;
-    font-size: 50px;
+    font-size: 42px;
     line-height: 62px;
 
     font-weight: 500;
@@ -53,57 +71,5 @@
 
     border: 3px solid white;
     border-radius: 32px;
-  }
-
-  .HeroSection .CalculatorContainer {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-
-  .HeroSection .CalculatorContainer .Calculator {
-    block-size: 360px;
-
-    display: flex;
-    align-items: center;
-
-    position: relative;
-  }
-
-  .HeroSection .CalculatorContainer .Calculator .PhoneDecoration {
-    inline-size: 340px;
-    block-size: 700px;
-
-    position: absolute;
-    top: -60px;
-    left: -24px;
-
-    background-image: url("/phone.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center 0px;
-
-    overflow: hidden;
-  }
-
-  .HeroSection .CalculatorContainer .Calculator .PhoneDecoration.Blur {
-    inline-size: 400px;
-    block-size: 900px;
-
-    top: -100px;
-    left: -52px;
-
-    filter: blur(60px);
-  }
-
-  .HeroSection .CalculatorContainer .Calculator .Card {
-    inline-size: 290px;
-    block-size: 640px;
-
-    background-color: rgb(229, 234, 240);
-    position: relative;
-    top: 100px;
-    left: 0px;
-    z-index: 3;
   }
 }

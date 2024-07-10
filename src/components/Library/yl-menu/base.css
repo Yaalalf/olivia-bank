@@ -1,0 +1,45 @@
+@layer yl-menu {
+  .yl-menu-container-background {
+    position: fixed;
+
+    top: 0px;
+    left: 0px;
+
+    z-index: 2000;
+  }
+
+  .yl-menu-container-background .yl-menu-close-area {
+    inline-size: 100vw;
+    block-size: 100vh;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    background-color: transparent;
+
+    z-index: 2001;
+  }
+
+  .yl-menu-container-background .yl-menu-container {
+    inline-size: auto;
+    block-size: auto;
+
+    position: absolute;
+
+    z-index: 2002;
+
+    background-color: rgb(238, 236, 242);
+    border-radius: 4px;
+
+    animation: scaleIn ease-in-out 100ms backwards;
+    overflow: hidden;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.251);
+
+    visibility: hidden;
+  }
+
+  .yl-menu-container-background .yl-menu-container.visible {
+    visibility: visible;
+  }
+}

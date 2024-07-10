@@ -18,6 +18,8 @@
 
   transition: all ease 100ms;
 
+  box-shadow: 3px 3px 6px rgba(44, 45, 46, 0.434) inset;
+
   overflow: hidden;
 }
 

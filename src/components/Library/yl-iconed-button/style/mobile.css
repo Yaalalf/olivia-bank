@@ -1,0 +1,14 @@
+.iconed_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconed_button .icon {
+  inline-size: 100%;
+  block-size: 100%;
+
+  background-color: rgb(33, 32, 32);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
